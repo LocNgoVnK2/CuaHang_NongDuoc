@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
@@ -8,23 +8,28 @@ namespace CuahangNongduoc.DataLayer
 {
     public class DonViTinhFactory
     {
-        DataService m_Ds = new DataService();
+        private readonly DataService m_Ds;
 
-        public DataTable DanhsachDVT()
+        public DonViTinhFactory()
         {
-            OleDbCommand cmd = new OleDbCommand("SELECT * FROM DON_VI_TINH");
+            this.m_Ds = new DataService();
+        }
+        private DataTable QueryDonViTinh(string query, OleDbParameter[] parameters = null)
+        {
+            OleDbCommand cmd = new OleDbCommand(query);
+            if (parameters != null)
+                cmd.Parameters.AddRange(parameters);
             m_Ds.Load(cmd);
-
             return m_Ds;
         }
-
-
+        public DataTable DanhsachDVT()
+        {
+            return QueryDonViTinh("SELECT * FROM DON_VI_TINH");
+        }
         public DataTable LayDVT(int id)
         {
-            OleDbCommand cmd = new OleDbCommand("SELECT * FROM DON_VI_TINH WHERE ID = @id");
-            cmd.Parameters.Add("id", OleDbType.Integer).Value = id;
-            m_Ds.Load(cmd);
-            return m_Ds;
+            OleDbParameter[] parameters = { new OleDbParameter("@id", OleDbType.Integer) { Value = id } };
+            return QueryDonViTinh("SELECT * FROM DON_VI_TINH WHERE ID = @id", parameters);
         }
         public bool Save()
         {

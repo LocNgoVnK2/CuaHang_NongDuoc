@@ -6,7 +6,7 @@ using System.Data.OleDb;
 
 namespace CuahangNongduoc.DataLayer
 {
-    public class ChiTietPhieuNhapFactory
+    public class ChiTietPhieuNhapFactory    
     {
         DataService m_Ds = new DataService();
 

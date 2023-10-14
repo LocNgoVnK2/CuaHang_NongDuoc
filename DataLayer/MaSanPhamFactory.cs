@@ -6,10 +6,15 @@ using System.Data.OleDb;
 
 namespace CuahangNongduoc.DataLayer
 {
-    public class MaSanPhanFactory
+    public class MaSanPhamFactory
     {
-        DataService m_Ds = new DataService();
+        private readonly DataService m_Ds;
 
+        public MaSanPhamFactory()
+        {
+            this.m_Ds = new DataService();
+        }
+      
         public void LoadSchema()
         {
             OleDbCommand cmd = new OleDbCommand("SELECT * FROM MA_SAN_PHAM WHERE ID = '-1'");
@@ -73,6 +78,7 @@ namespace CuahangNongduoc.DataLayer
             cmd.Parameters.Add("so", OleDbType.Integer).Value = so_luong;
             cmd.Parameters.Add("id", OleDbType.VarChar).Value = masp;
             ds.ExecuteNoneQuery(cmd);
+
         }
 
         public DataRow NewRow()

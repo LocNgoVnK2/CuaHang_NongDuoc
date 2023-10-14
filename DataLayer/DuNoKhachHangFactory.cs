@@ -8,7 +8,13 @@ namespace CuahangNongduoc.DataLayer
 {
     public class DuNoKhachHangFactory
     {
-        DataService m_Ds = new DataService();
+       
+        private readonly DataService m_Ds;
+
+        public DuNoKhachHangFactory()
+        {
+            this.m_Ds = new DataService();
+        }
 
         public void LoadSchema()
         {

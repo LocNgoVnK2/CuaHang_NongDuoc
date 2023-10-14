@@ -8,7 +8,12 @@ namespace CuahangNongduoc.DataLayer
 {
     public class PhieuThanhToanFactory
     {
-        DataService m_Ds = new DataService();
+        private readonly DataService m_Ds;
+
+        public PhieuThanhToanFactory()
+        {
+            this.m_Ds = new DataService();
+        }
 
         public DataTable DanhsachPhieuThanhToan()
         {

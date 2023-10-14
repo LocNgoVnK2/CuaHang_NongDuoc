@@ -90,10 +90,11 @@ namespace CuahangNongduoc
             MaSanPhamController ctrl = new MaSanPhamController();
             MaSanPham masp = ctrl.LayMaSanPham(cmbMaSanPham.SelectedValue.ToString());
             numDonGia.Value = masp.SanPham.GiaBanLe;
-            txtGiaNhap.Text = masp.GiaNhap.ToString("#,###0");
-            txtGiaBanSi.Text = masp.SanPham.GiaBanSi.ToString("#,###0");
-            txtGiaBanLe.Text = masp.SanPham.GiaBanLe.ToString("#,###0");
-            txtGiaBQGQ.Text = masp.SanPham.DonGiaNhap.ToString("#,###0");
+            string format = "#,###0";
+            txtGiaNhap.Text = masp.GiaNhap.ToString(format);
+            txtGiaBanSi.Text = masp.SanPham.GiaBanSi.ToString(format);
+            txtGiaBanLe.Text = masp.SanPham.GiaBanLe.ToString(format);
+            txtGiaBQGQ.Text = masp.SanPham.DonGiaNhap.ToString(format);
 
         }
 
@@ -161,7 +162,7 @@ namespace CuahangNongduoc
         {
             foreach (MaSanPham masp in deleted)
             {
-                CuahangNongduoc.DataLayer.MaSanPhanFactory.CapNhatSoLuong(masp.Id, masp.SoLuong);
+                CuahangNongduoc.DataLayer.MaSanPhamFactory.CapNhatSoLuong(masp.Id, masp.SoLuong);
             }
             deleted.Clear();
 
@@ -189,14 +190,17 @@ namespace CuahangNongduoc
                 MessageBox.Show("Mã Phiếu bán này đã tồn tại !", "Phieu Nhap", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (ThamSo.LaSoNguyen(txtMaPhieu.Text))
+            
+            long so = Convert.ToInt64(txtMaPhieu.Text);// nếu text không phải số return 0
+            if (so != 0)
             {
-                long so = Convert.ToInt64(txtMaPhieu.Text);
                 if (so >= ThamSo.LayMaPhieuBan())
                 {
                     ThamSo.GanMaPhieuBan(so + 1);
                 }
             }
+               
+            
 
             ctrlPhieuBan.Save();
 
@@ -314,7 +318,7 @@ namespace CuahangNongduoc
                     IList<ChiTietPhieuBan> ds = ctrl.ChiTietPhieuBan(view["ID"].ToString());
                     foreach (ChiTietPhieuBan ct in ds)
                     {
-                        CuahangNongduoc.DataLayer.MaSanPhanFactory.CapNhatSoLuong(ct.MaSanPham.Id, ct.SoLuong);
+                        CuahangNongduoc.DataLayer.MaSanPhamFactory.CapNhatSoLuong(ct.MaSanPham.Id, ct.SoLuong);
                     }
                     bindingNavigator.BindingSource.RemoveCurrent();
                     ctrlPhieuBan.Save();
