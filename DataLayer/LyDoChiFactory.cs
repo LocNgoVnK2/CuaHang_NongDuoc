@@ -9,7 +9,12 @@ namespace CuahangNongduoc.DataLayer
 {
     public class LyDoChiFactory
     {
-        DataService m_Ds = new DataService();
+        private readonly DataService m_Ds;
+
+        public LyDoChiFactory()
+        {
+            this.m_Ds = new DataService();
+        }
 
         public DataTable DanhsachLyDo()
         {

@@ -16,37 +16,47 @@ namespace CuahangNongduoc.DataLayer
             m_Ds.Load(cmd);
 
         }
+        private OleDbType GetOleDbType(object value)
+        {
+            if (value is string)
+            {
+                return OleDbType.VarChar;
+            }
+            else if (value is DateTime)
+            {
+                return OleDbType.Date;
+            }
+            return OleDbType.VarChar; // Default to string
+        }
+
+        private DataTable QueryPhieuNhap(string query, params object[] parameters)
+        {
+            OleDbCommand cmd = new OleDbCommand(query);
+            for (int i = 0; i < parameters.Length; i++)
+            {
+                cmd.Parameters.Add("param" + i, GetOleDbType(parameters[i]), 50).Value = parameters[i];
+            }
+
+            m_Ds.Load(cmd);
+            return m_Ds;
+        }
 
         public DataTable DanhsachPhieuNhap()
         {
-            OleDbCommand cmd = new OleDbCommand("SELECT * FROM PHIEU_NHAP");
-            m_Ds.Load(cmd);
-
-            return m_Ds;
+            return QueryPhieuNhap("SELECT * FROM PHIEU_NHAP");
         }
 
-        public DataTable TimPhieuNhap(String maNCC, DateTime dt)
+        public DataTable TimPhieuNhap(string maNCC, DateTime ngay)
         {
-            String sql = "SELECT * FROM PHIEU_NHAP WHERE NGAY_NHAP = @ngay AND ID_NHA_CUNG_CAP = @ncc";
-            OleDbCommand cmd = new OleDbCommand(sql);
-            cmd.Parameters.Add("ngay", OleDbType.Date).Value = dt;
-            cmd.Parameters.Add("ncc", OleDbType.VarChar).Value = maNCC;
-            
-            m_Ds.Load(cmd);
-
-            return m_Ds;
+            string sql = "SELECT * FROM PHIEU_NHAP WHERE NGAY_NHAP = @ngay AND ID_NHA_CUNG_CAP = @ncc";
+            return QueryPhieuNhap(sql, ngay, maNCC);
         }
 
-
-        public DataTable LayPhieuNhap(String id)
+        public DataTable LayPhieuNhap(string id)
         {
-            OleDbCommand cmd = new OleDbCommand("SELECT * FROM PHIEU_NHAP WHERE ID = @id");
-            cmd.Parameters.Add("id", OleDbType.VarChar,50).Value = id;
-            m_Ds.Load(cmd);
-            return m_Ds;
+            string sql = "SELECT * FROM PHIEU_NHAP WHERE ID = @id";
+            return QueryPhieuNhap(sql, id);
         }
-
-
         
         public DataRow NewRow()
         {

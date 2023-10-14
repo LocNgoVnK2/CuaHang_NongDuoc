@@ -8,49 +8,42 @@ namespace CuahangNongduoc.DataLayer
 {
     public class KhachHangFactory
     {
-        DataService m_Ds = new DataService();
-
+        private readonly DataService m_Ds;
+        public KhachHangFactory()
+        {
+            this.m_Ds = new DataService();
+        }
+        private DataTable QueryPhieuChi(string query, OleDbParameter[] parameters)
+        {
+            OleDbCommand cmd = new OleDbCommand(query);
+            if (parameters != null)
+                cmd.Parameters.AddRange(parameters);
+            m_Ds.Load(cmd);
+            return m_Ds;
+        }
         public DataTable DanhsachKhachHang(bool loai)
         {
-            OleDbCommand cmd = new OleDbCommand("SELECT * FROM KHACH_HANG WHERE LOAI_KH = " + loai);
-            m_Ds.Load(cmd);
-
-            return m_Ds;
+            return QueryPhieuChi("SELECT * FROM KHACH_HANG WHERE LOAI_KH = " + loai, null);
         }
-        public DataTable TimHoTen(String hoten, bool loai)
+        public DataTable TimHoTen(string hoten, bool loai)
         {
-            OleDbCommand cmd = new OleDbCommand("SELECT * FROM KHACH_HANG WHERE HO_TEN LIKE '%' + @hoten + '%' AND LOAI_KH = " + loai);
-            cmd.Parameters.Add("hoten", OleDbType.VarChar).Value = hoten;
-            m_Ds.Load(cmd);
-
-            return m_Ds;
+            OleDbParameter[] parameters = { new OleDbParameter("@hoten", OleDbType.VarChar) { Value = hoten } };
+            return QueryPhieuChi("SELECT * FROM KHACH_HANG WHERE HO_TEN LIKE '%' + @hoten + '%' AND LOAI_KH = " + loai, parameters);
         }
-
-        public DataTable TimDiaChi(String diachi, bool loai)
+        public DataTable TimDiaChi(string diachi, bool loai)
         {
-            OleDbCommand cmd = new OleDbCommand("SELECT * FROM KHACH_HANG WHERE DIA_CHI LIKE '%' + @diachi + '%' AND LOAI_KH = " + loai);
-            cmd.Parameters.Add("diachi", OleDbType.VarChar).Value = diachi;
-            m_Ds.Load(cmd);
-
-            return m_Ds;
+            OleDbParameter[] parameters = { new OleDbParameter("@diachi", OleDbType.VarChar) { Value = diachi } };
+            return QueryPhieuChi("SELECT * FROM KHACH_HANG WHERE DIA_CHI LIKE '%' + @diachi + '%' AND LOAI_KH = " + loai, parameters);
         }
-
         public DataTable DanhsachKhachHang()
         {
-            OleDbCommand cmd = new OleDbCommand("SELECT * FROM KHACH_HANG");
-            m_Ds.Load(cmd);
-
-            return m_Ds;
+            return QueryPhieuChi("SELECT * FROM KHACH_HANG", null);
         }
-
-        public DataTable LayKhachHang(String id)
+        public DataTable LayKhachHang(string id)
         {
-            OleDbCommand cmd = new OleDbCommand("SELECT * FROM KHACH_HANG WHERE ID = @id");
-            cmd.Parameters.Add("id", OleDbType.VarChar,50).Value = id;
-            m_Ds.Load(cmd);
-            return m_Ds;
+            OleDbParameter[] parameters = { new OleDbParameter("@id", OleDbType.VarChar, 50) { Value = id } };
+            return QueryPhieuChi("SELECT * FROM KHACH_HANG WHERE ID = @id", parameters);
         }
-
         public DataRow NewRow()
         {
             return m_Ds.NewRow();

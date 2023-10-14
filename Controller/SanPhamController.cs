@@ -11,7 +11,14 @@ namespace CuahangNongduoc.Controller
 {
     public class SanPhamController
     {
-        SanPhamFactory factory = new SanPhamFactory();
+     
+
+        private readonly SanPhamFactory factory;
+
+        public SanPhamController()
+        {
+            factory = new SanPhamFactory();
+        }
 
         public void HienthiAutoComboBox(System.Windows.Forms.ComboBox cmb)
         {

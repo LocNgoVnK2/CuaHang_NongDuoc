@@ -10,8 +10,13 @@ namespace CuahangNongduoc.Controller
 {
     public class LyDoChiController
     {
-        LyDoChiFactory factory = new LyDoChiFactory();
+  
+        private readonly LyDoChiFactory factory;
 
+        public LyDoChiController()
+        {
+            factory = new LyDoChiFactory();
+        }
         public void HienthiAutoComboBox(System.Windows.Forms.ComboBox cmb)
         {
             cmb.DataSource = factory.DanhsachLyDo();

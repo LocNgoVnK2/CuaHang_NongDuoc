@@ -10,8 +10,12 @@ namespace CuahangNongduoc.Controller
 {
     public class KhachHangController
     {
-        KhachHangFactory factory = new KhachHangFactory();
+        private readonly KhachHangFactory factory;
 
+        public KhachHangController()
+        {
+            factory = new KhachHangFactory();
+        }
         public void HienthiAutoComboBox(System.Windows.Forms.ComboBox cmb, bool loai)
         {
             cmb.DataSource = factory.DanhsachKhachHang(loai);

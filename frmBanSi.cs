@@ -163,7 +163,7 @@ namespace CuahangNongduoc
 
             foreach (MaSanPham masp in deleted)
             {
-                CuahangNongduoc.DataLayer.MaSanPhanFactory.CapNhatSoLuong(masp.Id, masp.SoLuong);
+                CuahangNongduoc.DataLayer.MaSanPhamFactory.CapNhatSoLuong(masp.Id, masp.SoLuong);
             }
             deleted.Clear();
 
@@ -190,9 +190,9 @@ namespace CuahangNongduoc
                 MessageBox.Show("Mã Phiếu bán này đã tồn tại !", "Phieu Nhap", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (ThamSo.LaSoNguyen(txtMaPhieu.Text))
+            long so = Convert.ToInt64(txtMaPhieu.Text);// nếu text không phải số return 0
+            if (so != 0)
             {
-                long so = Convert.ToInt64(txtMaPhieu.Text);
                 if (so >= ThamSo.LayMaPhieuBan())
                 {
                     ThamSo.GanMaPhieuBan(so + 1);
@@ -310,7 +310,7 @@ namespace CuahangNongduoc
                      IList<ChiTietPhieuBan> ds = ctrl.ChiTietPhieuBan(view["ID"].ToString());
                      foreach (ChiTietPhieuBan ct in ds)
                      {
-                         CuahangNongduoc.DataLayer.MaSanPhanFactory.CapNhatSoLuong(ct.MaSanPham.Id, ct.SoLuong);
+                         CuahangNongduoc.DataLayer.MaSanPhamFactory.CapNhatSoLuong(ct.MaSanPham.Id, ct.SoLuong);
                      }
                      bindingNavigator.BindingSource.RemoveCurrent();
                      ctrlPhieuBan.Save();

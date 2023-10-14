@@ -10,7 +10,14 @@ namespace CuahangNongduoc.Controller
 {
     public class DuNoKhachHangController
     {
-        DuNoKhachHangFactory factory = new DuNoKhachHangFactory();
+        private readonly DuNoKhachHangFactory factory;
+
+        public DuNoKhachHangController()
+        {
+            factory = new DuNoKhachHangFactory();
+        }
+
+        
 
         public void Tonghop(int thang, int nam, 
             ToolStripProgressBar bar, DataGridView dg, BindingNavigator bn)

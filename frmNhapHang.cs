@@ -181,9 +181,9 @@ namespace CuahangNongduoc
                 return;
             }
 
-            if (ThamSo.LaSoNguyen(txtMaPhieu.Text))
+            long so = Convert.ToInt64(txtMaPhieu.Text);//  nếu text không phải số return 0
+            if (so != 0)
             {
-                long so = Convert.ToInt64(txtMaPhieu.Text);
                 if (so >= ThamSo.LayMaPhieuNhap())
                 {
                     ThamSo.GanMaPhieuNhap(so + 1);

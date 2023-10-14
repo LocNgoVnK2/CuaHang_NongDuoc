@@ -24,19 +24,6 @@ namespace CuahangNongduoc
             }
         }
 
-        public static bool LaSoNguyen(String so)
-        {
-            try
-            {
-                Convert.ToInt64(so);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
         public static long LayMaPhieuNhap()
         {
             DataService ds = new DataService();

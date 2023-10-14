@@ -10,7 +10,12 @@ namespace CuahangNongduoc.Controller
 {
     public class DonViTinhController
     {
-        DonViTinhFactory factory = new DonViTinhFactory();
+        private readonly DonViTinhFactory factory;
+
+        public DonViTinhController()
+        {
+            factory = new DonViTinhFactory();
+        }
 
         public void HienthiAutoComboBox(System.Windows.Forms.ComboBox cmb)
         {

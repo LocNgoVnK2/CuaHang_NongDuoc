@@ -10,7 +10,13 @@ namespace CuahangNongduoc.Controller
 {
     public class NhaCungCapController
     {
-        NhaCungCapFactory factory = new  NhaCungCapFactory();
+        private readonly NhaCungCapFactory factory;
+
+        public NhaCungCapController()
+        {
+            factory = new NhaCungCapFactory();
+        }
+       
 
         public void HienthiAutoComboBox(System.Windows.Forms.ComboBox cmb)
         {
