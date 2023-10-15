@@ -107,7 +107,7 @@ namespace CuahangNongduoc.Controller
                 KhachHangController ctrlKH = new KhachHangController();
                 ph.KhachHang = ctrlKH.LayKhachHang(Convert.ToString(tbl.Rows[0]["ID_KHACH_HANG"]));
                 ChiTietPhieuBanController ctrl = new ChiTietPhieuBanController();
-                ph.ChiTiet = ctrl.ChiTietPhieuBan(ph.Id);
+                ph.ChiTiet = ctrl.ChiTietPhieuBanTheoID(ph.Id);
             }
             return ph;
         }

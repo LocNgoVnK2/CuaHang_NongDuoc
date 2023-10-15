@@ -18,7 +18,7 @@ namespace CuahangNongduoc.Controller
         public void HienThiChiTiet(DataGridView dgv, String idPhieuBan)
         {
             BindingSource bs = new BindingSource();
-            bs.DataSource = factory.LayChiTietPhieuBan(idPhieuBan);
+            bs.DataSource = factory.LayChiTietPhieuBanTheoID(idPhieuBan);
             dgv.DataSource = bs;
         }
         public DataRow NewRow()
@@ -35,11 +35,11 @@ namespace CuahangNongduoc.Controller
         }
 
 
-        public IList<ChiTietPhieuBan> ChiTietPhieuBan(String idPhieuBan)
+        public IList<ChiTietPhieuBan> ChiTietPhieuBanTheoID(String idPhieuBan)
         {
             IList<ChiTietPhieuBan> ds = new List<ChiTietPhieuBan>();
 
-            DataTable tbl = factory.LayChiTietPhieuBan(idPhieuBan);
+            DataTable tbl = factory.LayChiTietPhieuBanTheoID(idPhieuBan);
             foreach (DataRow row in tbl.Rows)
             {
                 MaSanPhamController ctrl = new MaSanPhamController();
@@ -54,11 +54,11 @@ namespace CuahangNongduoc.Controller
             return ds;
         }
 
-        public IList<ChiTietPhieuBan> ChiTietPhieuBan(DateTime dtNgayBan)
+        public IList<ChiTietPhieuBan> ChiTietPhieuBanTheoNgayBan(DateTime dtNgayBan)
         {
             IList<ChiTietPhieuBan> ds = new List<ChiTietPhieuBan>();
 
-            DataTable tbl = factory.LayChiTietPhieuBan(dtNgayBan);
+            DataTable tbl = factory.LayChiTietPhieuBanTheoNgayBan(dtNgayBan);
             foreach (DataRow row in tbl.Rows)
             {
                 MaSanPhamController ctrl = new MaSanPhamController();
@@ -72,11 +72,11 @@ namespace CuahangNongduoc.Controller
             }
             return ds;
         }
-        public IList<ChiTietPhieuBan> ChiTietPhieuBan(int thang, int nam)
+        public IList<ChiTietPhieuBan> ChiTietPhieuBanTheoThangVaNam(int thang, int nam)
         {
             IList<ChiTietPhieuBan> ds = new List<ChiTietPhieuBan>();
 
-            DataTable tbl = factory.LayChiTietPhieuBan(thang, nam);
+            DataTable tbl = factory.LayChiTietPhieuBanTheoThangVaNam(thang, nam);
             foreach (DataRow row in tbl.Rows)
             {
                 MaSanPhamController ctrl = new MaSanPhamController();
