@@ -11,32 +11,35 @@ namespace CuahangNongduoc.DataLayer
         DataService m_Ds = new DataService();
 
       
-
-        public DataTable LayChiTietPhieuBan(String idPhieuBan)
+        private DataTable QueryChiTietPhieuBan(string query, params object[] parameters)
         {
-            OleDbCommand cmd = new OleDbCommand("SELECT * FROM CHI_TIET_PHIEU_BAN WHERE ID_PHIEU_BAN = @id");
-            cmd.Parameters.Add("id", OleDbType.VarChar , 50).Value = idPhieuBan;
+            var cmd = new OleDbCommand(query);
+            for(int i = 0; i < parameters.Length; i++)
+            {
+                cmd.Parameters.Add("param"+i, OleDbType.VarChar,50).Value = parameters[i];
+            }
             m_Ds.Load(cmd);
             return m_Ds;
         }
-
-        public DataTable LayChiTietPhieuBan(DateTime dtNgayBan)
+        public DataTable LayChiTietPhieuBanTheoID(String idPhieuBan)
         {
-            OleDbCommand cmd = new OleDbCommand("SELECT CT.* FROM CHI_TIET_PHIEU_BAN CT INNER JOIN PHIEU_BAN PB ON CT.ID_PHIEU_BAN = PB.ID " +
-                    " WHERE PB.NGAY_BAN = @ngayban");
-            cmd.Parameters.Add("ngayban", OleDbType.Date).Value = dtNgayBan;
-            m_Ds.Load(cmd);
-            return m_Ds;
+            string query = "SELECT * FROM CHI_TIET_PHIEU_BAN WHERE ID_PHIEU_BAN = @id";
+            return QueryChiTietPhieuBan(query, idPhieuBan);
+         
         }
 
-        public DataTable LayChiTietPhieuBan(int thang, int nam)
+        public DataTable LayChiTietPhieuBanTheoNgayBan(DateTime dtNgayBan)
         {
-            OleDbCommand cmd = new OleDbCommand("SELECT CT.* FROM CHI_TIET_PHIEU_BAN CT INNER JOIN PHIEU_BAN PB ON CT.ID_PHIEU_BAN = PB.ID " +
-                    " WHERE MONTH(PB.NGAY_BAN) = @thang AND YEAR(PB.NGAY_BAN)= @nam");
-            cmd.Parameters.Add("thang", OleDbType.Integer).Value = thang;
-            cmd.Parameters.Add("nam", OleDbType.Integer).Value = nam;
-            m_Ds.Load(cmd);
-            return m_Ds;
+            string query = "SELECT CT.* FROM CHI_TIET_PHIEU_BAN CT INNER JOIN PHIEU_BAN PB ON CT.ID_PHIEU_BAN = PB.ID " +
+                    " WHERE PB.NGAY_BAN = @ngayban";
+            return QueryChiTietPhieuBan(query, dtNgayBan);
+        }
+
+        public DataTable LayChiTietPhieuBanTheoThangVaNam(int thang, int nam)
+        {
+            string query = "SELECT CT.* FROM CHI_TIET_PHIEU_BAN CT INNER JOIN PHIEU_BAN PB ON CT.ID_PHIEU_BAN = PB.ID " +
+                    " WHERE MONTH(PB.NGAY_BAN) = @thang AND YEAR(PB.NGAY_BAN)= @nam";
+            return QueryChiTietPhieuBan(query, thang, nam);
         }
 
         
