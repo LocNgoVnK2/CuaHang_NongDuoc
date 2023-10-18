@@ -32,35 +32,7 @@ namespace CuahangNongduoc
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            //RegistryKey regKey = Registry.CurrentUser.OpenSubKey("Software\\CoolSoft\\CuahangNongduoc");
-
-            //if (regKey == null)
-            //{
-            //    DataService.m_ConnectString = "";
-            //}
-            //else
-            //{
-            //    try
-            //    {
-            //        DataService.m_ConnectString = (String)regKey.GetValue("ConnectString");
-            //    }
-            //    catch
-            //    {
-            //    }
-            //    finally
-            //    {
-            //        regKey.Close();
-            //    }
-            //}
-
-            //if (DataService.OpenConnection() == false)
-            //{
-            //    MessageBox.Show("Không thể kết nối dữ liệu!", "Cua hang Nong duoc", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    this.Close();
-            //}
-
             DataService.OpenConnection();
-            
         }
         frmSanPham SanPham = null;
         private void mnuSanPham_Click(object sender, EventArgs e)
