@@ -34,7 +34,7 @@ namespace CuahangNongduoc
 
             this.reportViewer.LocalReport.SetParameters(param);
 
-            this.ChiTietPhieuBanBindingSource.DataSource = ctrl.ChiTietPhieuBan(dtNgay.Value.Date);
+            this.ChiTietPhieuBanBindingSource.DataSource = ctrl.ChiTietPhieuBanTheoNgayBan(dtNgay.Value.Date);
             this.reportViewer.RefreshReport();
         }
 
@@ -47,7 +47,7 @@ namespace CuahangNongduoc
             this.reportViewer.LocalReport.SetParameters(param);
 
 
-            this.ChiTietPhieuBanBindingSource.DataSource = ctrl.ChiTietPhieuBan(cmbThang.SelectedIndex + 1, Convert.ToInt32(numNam.Value));
+            this.ChiTietPhieuBanBindingSource.DataSource = ctrl.ChiTietPhieuBanTheoThangVaNam(cmbThang.SelectedIndex + 1, Convert.ToInt32(numNam.Value));
             this.reportViewer.RefreshReport();
         }
 
