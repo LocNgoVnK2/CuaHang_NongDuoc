@@ -51,7 +51,7 @@ namespace CuahangNongduoc.Controller
         public void HienthiPhieuBanLe(BindingNavigator bn, DataGridView dg)
         {
 
-            bs.DataSource = factory.DanhsachPhieuBanLe();
+            bs.DataSource = factory.DanhsachPhieuBan(false);
             bn.BindingSource = bs;
             dg.DataSource = bs;
         }
@@ -59,7 +59,7 @@ namespace CuahangNongduoc.Controller
         public void HienthiPhieuBanSi(BindingNavigator bn, DataGridView dg)
         {
 
-            bs.DataSource = factory.DanhsachPhieuBanSi();
+            bs.DataSource = factory.DanhsachPhieuBan(true);
             bn.BindingSource = bs;
             dg.DataSource = bs;
         }
@@ -107,7 +107,7 @@ namespace CuahangNongduoc.Controller
                 KhachHangController ctrlKH = new KhachHangController();
                 ph.KhachHang = ctrlKH.LayKhachHang(Convert.ToString(tbl.Rows[0]["ID_KHACH_HANG"]));
                 ChiTietPhieuBanController ctrl = new ChiTietPhieuBanController();
-                ph.ChiTiet = ctrl.ChiTietPhieuBan(ph.Id);
+                ph.ChiTiet = ctrl.ChiTietPhieuBanTheoID(ph.Id);
             }
             return ph;
         }
