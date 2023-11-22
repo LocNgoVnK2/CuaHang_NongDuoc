@@ -89,15 +89,20 @@ namespace CuahangNongduoc
 
         void cmbMaSanPham_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MaSanPhamController ctrl = new MaSanPhamController();
-            MaSanPham masp = ctrl.LayMaSanPham(cmbMaSanPham.SelectedValue.ToString());
-            numDonGia.Value = masp.SanPham.GiaBanSi;
-            txtGiaNhap.Text = masp.GiaNhap.ToString("#,###0");
-            txtGiaBanSi.Text = masp.SanPham.GiaBanSi.ToString("#,###0");
-            txtGiaBanLe.Text = masp.SanPham.GiaBanLe.ToString("#,###0");
-            txtGiaBQGQ.Text = masp.SanPham.DonGiaNhap.ToString("#,###0");
-
-
+            try { 
+                MaSanPhamController ctrl = new MaSanPhamController();
+                MaSanPham masp = ctrl.LayMaSanPham(cmbMaSanPham.SelectedValue.ToString());
+                numDonGia.Value = masp.SanPham.GiaBanSi;
+                string formatTien = "#,###0";
+                txtGiaNhap.Text = masp.GiaNhap.ToString(formatTien);
+                txtGiaBanSi.Text = masp.SanPham.GiaBanSi.ToString(formatTien);
+                txtGiaBanLe.Text = masp.SanPham.GiaBanLe.ToString(formatTien);
+                txtGiaBQGQ.Text = masp.SanPham.DonGiaNhap.ToString(formatTien);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

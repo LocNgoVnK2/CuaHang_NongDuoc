@@ -87,14 +87,25 @@ namespace CuahangNongduoc
 
         void cmbMaSanPham_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MaSanPhamController ctrl = new MaSanPhamController();
-            MaSanPham masp = ctrl.LayMaSanPham(cmbMaSanPham.SelectedValue.ToString());
-            numDonGia.Value = masp.SanPham.GiaBanLe;
-            string format = "#,###0";
-            txtGiaNhap.Text = masp.GiaNhap.ToString(format);
-            txtGiaBanSi.Text = masp.SanPham.GiaBanSi.ToString(format);
-            txtGiaBanLe.Text = masp.SanPham.GiaBanLe.ToString(format);
-            txtGiaBQGQ.Text = masp.SanPham.DonGiaNhap.ToString(format);
+
+            try
+            {
+                MaSanPhamController ctrl = new MaSanPhamController();
+                MaSanPham masp = ctrl.LayMaSanPham(cmbMaSanPham.SelectedValue.ToString());
+
+                numDonGia.Value = masp.SanPham.GiaBanLe;
+
+                string format = "#,###0";
+                txtGiaNhap.Text = masp.GiaNhap.ToString(format);
+                txtGiaBanSi.Text = masp.SanPham.GiaBanSi.ToString(format);
+                txtGiaBanLe.Text = masp.SanPham.GiaBanLe.ToString(format);
+                txtGiaBQGQ.Text = masp.SanPham.DonGiaNhap.ToString(format);
+            }
+            catch (Exception ex)
+            {
+             
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
