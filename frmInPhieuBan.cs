@@ -34,6 +34,13 @@ namespace CuahangNongduoc
             param.Add(new Microsoft.Reporting.WinForms.ReportParameter("dia_chi", ch.DiaChi));
             param.Add(new Microsoft.Reporting.WinForms.ReportParameter("dien_thoai", ch.DienThoai));
             param.Add(new Microsoft.Reporting.WinForms.ReportParameter("bang_chu", num.NumberToString(m_PhieuBan.TongTien.ToString())));
+            
+            param.Add(new Microsoft.Reporting.WinForms.ReportParameter("ten_khach_hang", m_PhieuBan.KhachHang.HoTen));
+            param.Add(new Microsoft.Reporting.WinForms.ReportParameter("dia_chi_khach", m_PhieuBan.KhachHang.DiaChi));
+            param.Add(new Microsoft.Reporting.WinForms.ReportParameter("dien_thoai_khach", m_PhieuBan.KhachHang.DienThoai));
+            
+
+
 
             this.reportViewer.LocalReport.SetParameters(param);
             this.PhieuBanBindingSource.DataSource = m_PhieuBan;
