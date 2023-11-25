@@ -25,6 +25,8 @@ namespace CuahangNongduoc
             param.Add(new Microsoft.Reporting.WinForms.ReportParameter("ten_cua_hang", ch.TenCuaHang));
             param.Add(new Microsoft.Reporting.WinForms.ReportParameter("dia_chi", ch.DiaChi));
             param.Add(new Microsoft.Reporting.WinForms.ReportParameter("dien_thoai", ch.DienThoai));
+            param.Add(new Microsoft.Reporting.WinForms.ReportParameter("ghi_chu", m_PhieuChi.GhiChu));
+            param.Add(new Microsoft.Reporting.WinForms.ReportParameter("li_do_chi", m_PhieuChi.LyDoChi.LyDo));
 
             param.Add(new Microsoft.Reporting.WinForms.ReportParameter("bang_chu", num.NumberToString(m_PhieuChi.TongTien.ToString())));
 

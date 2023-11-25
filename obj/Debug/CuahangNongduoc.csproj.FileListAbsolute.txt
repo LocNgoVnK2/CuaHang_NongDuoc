@@ -39,6 +39,47 @@ D:\TeachingAGU\BaoTriPhanMem\Cuahang_Nongduoc\Cuahang Nongduoc\bin\Debug\Cuahang
 D:\TeachingAGU\BaoTriPhanMem\Cuahang_Nongduoc\Cuahang Nongduoc\bin\Debug\Microsoft.ReportViewer.Common.dll
 D:\TeachingAGU\BaoTriPhanMem\Cuahang_Nongduoc\Cuahang Nongduoc\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 D:\TeachingAGU\BaoTriPhanMem\Cuahang_Nongduoc\Cuahang Nongduoc\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+E:\CuaHangNongDuoc\bin\Debug\CuahangNongduoc.exe
+E:\CuaHangNongDuoc\bin\Debug\CuahangNongduoc.pdb
+E:\CuaHangNongDuoc\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.csproj.AssemblyReference.cache
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmInPhieuChi.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmPhieuChi.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmLyDoChi.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmBanSi.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDanhsachPhieuBanSi.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDanhsachPhieuBanLe.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmBanLe.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDaiLy.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDanhsachPhieuNhap.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDoanhThu.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDonViTinh.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDunoKhachhang.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmInDunoKhachHang.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmInPhieuBan.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmInPhieuNhap.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmKhachHang.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmMain.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmNhaCungCap.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmNhapHang.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmInPhieuThanhToan.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmSanPham.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmSanphamHethan.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmSoLuongBan.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmSoLuongTon.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmThanhToan.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmThongtinCuahang.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmThongtinLienhe.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmTimPhieuBanLe.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmTimPhieuChi.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmTimPhieuNhap.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmTimPhieuThu.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.Properties.Resources.resources
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.csproj.GenerateResource.cache
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.csproj.CoreCompileInputs.cache
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.csproj.CopyComplete
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.exe
+E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.pdb
 D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\bin\Debug\CuahangNongduoc.exe
 D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\bin\Debug\CuahangNongduoc.pdb
 D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\bin\Debug\Microsoft.ReportViewer.Common.dll
@@ -82,44 +123,3 @@ D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\obj\Debug\CuahangNongduoc.csproj.C
 D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\obj\Debug\CuahangNongduoc.csproj.CopyComplete
 D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\obj\Debug\CuahangNongduoc.exe
 D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\obj\Debug\CuahangNongduoc.pdb
-E:\CuaHangNongDuoc\bin\Debug\CuahangNongduoc.exe
-E:\CuaHangNongDuoc\bin\Debug\CuahangNongduoc.pdb
-E:\CuaHangNongDuoc\bin\Debug\Microsoft.ReportViewer.WinForms.xml
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.csproj.AssemblyReference.cache
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmInPhieuChi.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmPhieuChi.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmLyDoChi.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmBanSi.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDanhsachPhieuBanSi.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDanhsachPhieuBanLe.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmBanLe.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDaiLy.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDanhsachPhieuNhap.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDoanhThu.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDonViTinh.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmDunoKhachhang.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmInDunoKhachHang.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmInPhieuBan.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmInPhieuNhap.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmKhachHang.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmMain.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmNhaCungCap.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmNhapHang.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmInPhieuThanhToan.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmSanPham.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmSanphamHethan.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmSoLuongBan.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmSoLuongTon.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmThanhToan.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmThongtinCuahang.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmThongtinLienhe.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmTimPhieuBanLe.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmTimPhieuChi.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmTimPhieuNhap.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.frmTimPhieuThu.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.Properties.Resources.resources
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.csproj.GenerateResource.cache
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.csproj.CoreCompileInputs.cache
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.csproj.CopyComplete
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.exe
-E:\CuaHangNongDuoc\obj\Debug\CuahangNongduoc.pdb
