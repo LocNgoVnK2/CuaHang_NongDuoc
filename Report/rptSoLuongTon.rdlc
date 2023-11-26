@@ -26,6 +26,34 @@
 					<DataField>SanPham</DataField>
 					<rd:TypeName>CuahangNongduoc.BusinessObject.SanPham</rd:TypeName>
 				</Field>
+
+				<Field Name="MaSanPham">
+					<DataField>MaSanPham</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="TenSanPham">
+					<DataField>TenSanPham</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				<Field Name="GiaNhap">
+					<DataField>GiaNhap</DataField>
+					<rd:TypeName>System.Int64</rd:TypeName>
+				</Field>
+				<Field Name="GiaLe">
+					<DataField>GiaLe</DataField>
+					<rd:TypeName>System.Int64</rd:TypeName>
+				</Field>
+				<Field Name="GiaSi">
+					<DataField>GiaSi</DataField>
+					<rd:TypeName>System.Int64</rd:TypeName>
+				</Field>
+				<Field Name="DonViTinh">
+					<DataField>DonViTinh</DataField>
+					<rd:TypeName>System.String</rd:TypeName>
+				</Field>
+				
+				
+				
 				<Field Name="SoLuong">
 					<DataField>SoLuong</DataField>
 					<rd:TypeName>System.Int32</rd:TypeName>
@@ -88,7 +116,7 @@
 											</Style>
 											<ZIndex>6</ZIndex>
 											<CanGrow>true</CanGrow>
-											<Value>=Fields!SanPham.Value.Id</Value>
+											<Value>=Fields!MaSanPham.Value</Value>
 										</Textbox>
 									</ReportItems>
 								</TableCell>
@@ -107,7 +135,7 @@
 											</Style>
 											<ZIndex>5</ZIndex>
 											<CanGrow>true</CanGrow>
-											<Value>=Fields!SanPham.Value.TenSanPham</Value>
+											<Value>=Fields!TenSanPham.Value</Value>
 										</Textbox>
 									</ReportItems>
 								</TableCell>
@@ -127,7 +155,7 @@
 											</Style>
 											<ZIndex>4</ZIndex>
 											<CanGrow>true</CanGrow>
-											<Value>=Fields!SanPham.Value.DonGiaNhap</Value>
+											<Value>=Fields!GiaNhap.Value</Value>
 										</Textbox>
 									</ReportItems>
 								</TableCell>
@@ -147,7 +175,7 @@
 											</Style>
 											<ZIndex>3</ZIndex>
 											<CanGrow>true</CanGrow>
-											<Value>=Fields!SanPham.Value.GiaBanLe</Value>
+											<Value>=Fields!GiaLe.Value</Value>
 										</Textbox>
 									</ReportItems>
 								</TableCell>
@@ -167,7 +195,7 @@
 											</Style>
 											<ZIndex>2</ZIndex>
 											<CanGrow>true</CanGrow>
-											<Value>=Fields!SanPham.Value.GiaBanSi</Value>
+											<Value>=Fields!GiaSi.Value</Value>
 										</Textbox>
 									</ReportItems>
 								</TableCell>
@@ -186,7 +214,7 @@
 											</Style>
 											<ZIndex>1</ZIndex>
 											<CanGrow>true</CanGrow>
-											<Value>=Fields!SanPham.Value.DonViTinh.Ten</Value>
+											<Value>=Fields!DonViTinh.Value</Value>
 										</Textbox>
 									</ReportItems>
 								</TableCell>

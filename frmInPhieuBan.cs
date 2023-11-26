@@ -15,6 +15,7 @@ namespace CuahangNongduoc
         {
             InitializeComponent();
             reportViewer.LocalReport.ExecuteReportInCurrentAppDomain(System.Reflection.Assembly.GetExecutingAssembly().Evidence);
+
             this.reportViewer.LocalReport.SubreportProcessing += new Microsoft.Reporting.WinForms.SubreportProcessingEventHandler(LocalReport_SubreportProcessing);
             m_PhieuBan = ph;
         }

@@ -50,6 +50,11 @@
           <DataField>SanPham</DataField>
           <rd:TypeName>CuahangNongduoc.BusinessObject.SanPham</rd:TypeName>
         </Field>
+		  <Field Name="TenSP">
+			  <DataField>TenSP</DataField>
+			  <rd:TypeName>System.String</rd:TypeName>
+		  </Field>
+		  
         <Field Name="SoLuong">
           <DataField>SoLuong</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -104,8 +109,8 @@
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="SanPham">
-                      <rd:DefaultName>SanPham</rd:DefaultName>
+                    <Textbox Name="TenSP">
+                      <rd:DefaultName>TenSP</rd:DefaultName>
                       <Style>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -118,7 +123,7 @@
                       </Style>
                       <ZIndex>6</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!SanPham.Value.TenSanPham</Value>
+						<Value>=Fields!TenSP.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>

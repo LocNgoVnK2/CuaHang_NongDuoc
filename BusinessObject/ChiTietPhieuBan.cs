@@ -20,6 +20,12 @@ namespace CuahangNongduoc.BusinessObject
             get { return m_MaSP; }
             set { m_MaSP = value; }
         }
+        private string m_TenSP;
+
+        public string TenSP
+        {
+            get { return m_MaSP.SanPham.TenSanPham; }
+        }
         private int m_SoLuong;
 
         public int SoLuong
