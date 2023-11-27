@@ -39,8 +39,12 @@
           <DataField>SoLuong</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-
-        <Field Name="ThanhTien">
+		  
+		<Field Name="NgayHetHan">
+		    <DataField>NgayHetHan</DataField>
+			<rd:TypeName>System.String</rd:TypeName>
+		</Field>
+		  <Field Name="ThanhTien">
           <DataField>ThanhTien</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
@@ -171,10 +175,33 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!ThanhTien.Value</Value>
+					  <Value>=Fields!ThanhTien.Value</Value>
+                    
                     </Textbox>
                   </ReportItems>
                 </TableCell>
+				  <TableCell>
+					  <ReportItems>
+						  <Textbox Name="NgayHetHan">
+							  <rd:DefaultName>NgayHetHan</rd:DefaultName>
+							  <Style>
+								  <BorderStyle>
+									  <Default>Solid</Default>
+								  </BorderStyle>
+								  <FontFamily>Times New Roman</FontFamily>
+								  <Format>#,###0</Format>
+								  <TextAlign>Right</TextAlign>
+								  <PaddingLeft>2pt</PaddingLeft>
+								  <PaddingRight>2pt</PaddingRight>
+								  <PaddingTop>2pt</PaddingTop>
+								  <PaddingBottom>2pt</PaddingBottom>
+							  </Style>
+							  <CanGrow>true</CanGrow>
+							  <Value>=Fields!NgayHetHan.Value</Value>
+
+						  </Textbox>
+					  </ReportItems>
+				  </TableCell>
               </TableCells>
               <Height>0.63492cm</Height>
             </TableRow>
@@ -297,6 +324,28 @@
                     </Textbox>
                   </ReportItems>
                 </TableCell>
+				  <TableCell>
+					  <ReportItems>
+						  <Textbox Name="textbox17">
+							  <rd:DefaultName>textbox17</rd:DefaultName>
+							  <Style>
+								  <BorderStyle>
+									  <Default>Solid</Default>
+								  </BorderStyle>
+								  <FontFamily>Times New Roman</FontFamily>
+								  <FontWeight>700</FontWeight>
+								  <TextAlign>Center</TextAlign>
+								  <PaddingLeft>2pt</PaddingLeft>
+								  <PaddingRight>2pt</PaddingRight>
+								  <PaddingTop>2pt</PaddingTop>
+								  <PaddingBottom>2pt</PaddingBottom>
+							  </Style>
+							  <ZIndex>5</ZIndex>
+							  <CanGrow>true</CanGrow>
+							  <Value>Ngày hết hạn </Value>
+						  </Textbox>
+					  </ReportItems>
+				  </TableCell>
               </TableCells>
               <Height>0.63492cm</Height>
             </TableRow>
@@ -318,6 +367,9 @@
           <TableColumn>
             <Width>2.5cm</Width>
           </TableColumn>
+			<TableColumn>
+				<Width>2.5cm</Width>
+			</TableColumn>
         </TableColumns>
       </Table>
     </ReportItems>
