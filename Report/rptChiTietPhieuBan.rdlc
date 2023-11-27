@@ -26,9 +26,9 @@
           <DataField>DonGia</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="MaSanPham">
-          <DataField>MaSanPham</DataField>
-          <rd:TypeName>CuahangNongduoc.BusinessObject.MaSanPham</rd:TypeName>
+        <Field Name="TenSP">
+          <DataField>TenSP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="PhieuBan">
           <DataField>PhieuBan</DataField>
@@ -60,7 +60,6 @@
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
       <Table Name="table1">
-        <DataSetName>CuahangNongduoc_BusinessObject_ChiTietPhieuBan</DataSetName>
         <Details>
           <TableRows>
             <TableRow>
@@ -88,8 +87,8 @@
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="MaSanPham">
-                      <rd:DefaultName>MaSanPham</rd:DefaultName>
+                    <Textbox Name="TenSP">
+                      <rd:DefaultName>TenSP</rd:DefaultName>
                       <Style>
                         <BorderStyle>
                           <Default>Solid</Default>
@@ -102,8 +101,10 @@
                       </Style>
                       <ZIndex>3</ZIndex>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!MaSanPham.Value.SanPham.TenSanPham</Value>
-                    </Textbox>
+
+					  <Value>=Fields!TenSP.Value</Value>
+
+					</Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>

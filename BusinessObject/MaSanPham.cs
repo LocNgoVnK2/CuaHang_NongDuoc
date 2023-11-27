@@ -28,6 +28,16 @@ namespace CuahangNongduoc.BusinessObject
             get { return m_SanPham; }
             set { m_SanPham = value; }
         }
+
+        private string m_TenSP;
+
+        public string TenSP
+        {
+            get { return m_SanPham.TenSanPham; }
+          
+        }
+
+
         private long m_GiaNhap;
 
         public long GiaNhap
