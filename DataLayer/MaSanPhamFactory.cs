@@ -20,7 +20,14 @@ namespace CuahangNongduoc.DataLayer
             OleDbCommand cmd = new OleDbCommand("SELECT * FROM MA_SAN_PHAM WHERE ID = '-1'");
             m_Ds.Load(cmd);
         }
+        public DataTable DanhsachMaSanPhamTheoNgayHetHan(String sp)
+        {
+            OleDbCommand cmd = new OleDbCommand("SELECT * FROM MA_SAN_PHAM WHERE ID_SAN_PHAM=@id AND SO_LUONG > 0 ORDER BY NGAY_HET_HAN");
+            cmd.Parameters.Add("id", OleDbType.VarChar, 50).Value = sp;
+            m_Ds.Load(cmd);
 
+            return m_Ds;
+        }
         public DataTable DanhsachMaSanPham(String sp)
         {
             OleDbCommand cmd = new OleDbCommand("SELECT * FROM MA_SAN_PHAM WHERE ID_SAN_PHAM=@id AND SO_LUONG > 0");
