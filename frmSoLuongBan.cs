@@ -51,6 +51,5 @@ namespace CuahangNongduoc
             this.reportViewer.RefreshReport();
         }
 
-      
     }
 }

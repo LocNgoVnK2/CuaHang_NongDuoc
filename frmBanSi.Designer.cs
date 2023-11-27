@@ -101,6 +101,12 @@
             this.numDaTra = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.nmrChietKhau = new System.Windows.Forms.NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
+            this.nmrVanChuyen = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
+            this.nmrDichVu = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
             this.bindingNavigator.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -116,6 +122,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numConNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTongTien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDaTra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrChietKhau)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrVanChuyen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrDichVu)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator
@@ -409,11 +418,17 @@
             this.panel1.Location = new System.Drawing.Point(0, 51);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 292);
+            this.panel1.Size = new System.Drawing.Size(1000, 383);
             this.panel1.TabIndex = 61;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.nmrChietKhau);
+            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Controls.Add(this.nmrVanChuyen);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.nmrDichVu);
+            this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.rdXuatChiDinh);
             this.groupBox2.Controls.Add(this.rdHetHanXuatTruoc);
             this.groupBox2.Controls.Add(this.rdNhapTruocXuatTruoc);
@@ -435,7 +450,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(677, 292);
+            this.groupBox2.Size = new System.Drawing.Size(677, 383);
             this.groupBox2.TabIndex = 61;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chọn sản phẩm";
@@ -625,7 +640,7 @@
             // numThanhTien
             // 
             this.numThanhTien.Enabled = false;
-            this.numThanhTien.Location = new System.Drawing.Point(93, 228);
+            this.numThanhTien.Location = new System.Drawing.Point(93, 328);
             this.numThanhTien.Margin = new System.Windows.Forms.Padding(4);
             this.numThanhTien.Maximum = new decimal(new int[] {
             -727379968,
@@ -646,7 +661,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 228);
+            this.label7.Location = new System.Drawing.Point(12, 328);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 16);
@@ -780,7 +795,7 @@
             this.grpPhieuBanLe.Margin = new System.Windows.Forms.Padding(4);
             this.grpPhieuBanLe.Name = "grpPhieuBanLe";
             this.grpPhieuBanLe.Padding = new System.Windows.Forms.Padding(4);
-            this.grpPhieuBanLe.Size = new System.Drawing.Size(323, 292);
+            this.grpPhieuBanLe.Size = new System.Drawing.Size(323, 383);
             this.grpPhieuBanLe.TabIndex = 60;
             this.grpPhieuBanLe.TabStop = false;
             this.grpPhieuBanLe.Text = "Phiếu bán lẽ";
@@ -970,6 +985,89 @@
             this.label8.TabIndex = 42;
             this.label8.Text = "Tổng tiền";
             // 
+            // nmrChietKhau
+            // 
+            this.nmrChietKhau.Location = new System.Drawing.Point(138, 293);
+            this.nmrChietKhau.Margin = new System.Windows.Forms.Padding(4);
+            this.nmrChietKhau.Name = "nmrChietKhau";
+            this.nmrChietKhau.Size = new System.Drawing.Size(162, 22);
+            this.nmrChietKhau.TabIndex = 79;
+            this.nmrChietKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nmrChietKhau.ThousandsSeparator = true;
+            this.nmrChietKhau.ValueChanged += new System.EventHandler(this.nmrChietKhau_ValueChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(12, 293);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(92, 16);
+            this.label20.TabIndex = 78;
+            this.label20.Text = "Chiết khấu (%)";
+            // 
+            // nmrVanChuyen
+            // 
+            this.nmrVanChuyen.Location = new System.Drawing.Point(138, 263);
+            this.nmrVanChuyen.Margin = new System.Windows.Forms.Padding(4);
+            this.nmrVanChuyen.Maximum = new decimal(new int[] {
+            -727379968,
+            232,
+            0,
+            0});
+            this.nmrVanChuyen.Minimum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            -2147483648});
+            this.nmrVanChuyen.Name = "nmrVanChuyen";
+            this.nmrVanChuyen.Size = new System.Drawing.Size(162, 22);
+            this.nmrVanChuyen.TabIndex = 77;
+            this.nmrVanChuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nmrVanChuyen.ThousandsSeparator = true;
+            this.nmrVanChuyen.ValueChanged += new System.EventHandler(this.nmrVanChuyen_ValueChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(12, 263);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(118, 16);
+            this.label19.TabIndex = 76;
+            this.label19.Text = "Chi phí vận chuyển";
+            // 
+            // nmrDichVu
+            // 
+            this.nmrDichVu.Location = new System.Drawing.Point(127, 232);
+            this.nmrDichVu.Margin = new System.Windows.Forms.Padding(4);
+            this.nmrDichVu.Maximum = new decimal(new int[] {
+            -727379968,
+            232,
+            0,
+            0});
+            this.nmrDichVu.Minimum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            -2147483648});
+            this.nmrDichVu.Name = "nmrDichVu";
+            this.nmrDichVu.Size = new System.Drawing.Size(173, 22);
+            this.nmrDichVu.TabIndex = 75;
+            this.nmrDichVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nmrDichVu.ThousandsSeparator = true;
+            this.nmrDichVu.ValueChanged += new System.EventHandler(this.nmrDichVu_ValueChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(12, 232);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(107, 16);
+            this.label18.TabIndex = 74;
+            this.label18.Text = "Dịch vụ phát sinh";
+            // 
             // frmBanSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1002,6 +1100,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numConNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTongTien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDaTra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrChietKhau)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrVanChuyen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrDichVu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1080,5 +1181,11 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DateTimePicker dtpNgayHetHan;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.NumericUpDown nmrChietKhau;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.NumericUpDown nmrVanChuyen;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.NumericUpDown nmrDichVu;
+        private System.Windows.Forms.Label label18;
     }
 }

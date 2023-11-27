@@ -144,7 +144,7 @@ namespace CuahangNongduoc
 
         private void numDonGia_ValueChanged(object sender, EventArgs e)
         {
-            numThanhTien.Value = numDonGia.Value * numSoLuong.Value;
+            TinhTongTien();
         }
 
         private void numTongTien_ValueChanged(object sender, EventArgs e)
@@ -371,6 +371,27 @@ namespace CuahangNongduoc
             //cmbMaSanPham.SelectedItem = cmbMaSanPham.Items[0];
 
 
+        }
+
+        private void nmrVanChuyen_ValueChanged(object sender, EventArgs e)
+        {
+            TinhTongTien();
+        }
+
+        private void nmrDichVu_ValueChanged(object sender, EventArgs e)
+        {
+            TinhTongTien();
+        }
+
+        private void nmrChietKhau_ValueChanged(object sender, EventArgs e)
+        {
+            TinhTongTien();
+        }
+        private void TinhTongTien()
+        {
+            decimal thanhTien = numDonGia.Value * numSoLuong.Value + nmrVanChuyen.Value + nmrDichVu.Value;
+            decimal soTienChietKhau = thanhTien * nmrChietKhau.Value / 100;
+            numThanhTien.Value = thanhTien - soTienChietKhau;
         }
     }
 }
