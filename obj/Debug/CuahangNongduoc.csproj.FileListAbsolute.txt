@@ -123,3 +123,43 @@ D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\obj\Debug\CuahangNongduoc.csproj.C
 D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\obj\Debug\CuahangNongduoc.csproj.CopyComplete
 D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\obj\Debug\CuahangNongduoc.exe
 D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\obj\Debug\CuahangNongduoc.pdb
+D:\BTPM\bin\Debug\CuahangNongduoc.exe
+D:\BTPM\bin\Debug\CuahangNongduoc.pdb
+D:\BTPM\obj\Debug\CuahangNongduoc.csproj.AssemblyReference.cache
+D:\BTPM\obj\Debug\CuahangNongduoc.frmInPhieuChi.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmPhieuChi.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmLyDoChi.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmBanSi.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmDanhsachPhieuBanSi.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmDanhsachPhieuBanLe.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmBanLe.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmDaiLy.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmDanhsachPhieuNhap.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmDoanhThu.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmDonViTinh.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmDunoKhachhang.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmInDunoKhachHang.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmInPhieuBan.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmInPhieuNhap.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmKhachHang.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmMain.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmNhaCungCap.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmNhapHang.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmInPhieuThanhToan.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmSanPham.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmSanphamHethan.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmSoLuongBan.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmSoLuongTon.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmThanhToan.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmThongtinCuahang.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmThongtinLienhe.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmTimPhieuBanLe.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmTimPhieuChi.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmTimPhieuNhap.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.frmTimPhieuThu.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.Properties.Resources.resources
+D:\BTPM\obj\Debug\CuahangNongduoc.csproj.GenerateResource.cache
+D:\BTPM\obj\Debug\CuahangNongduoc.csproj.CoreCompileInputs.cache
+D:\BTPM\obj\Debug\CuahangNongduoc.csproj.CopyComplete
+D:\BTPM\obj\Debug\CuahangNongduoc.exe
+D:\BTPM\obj\Debug\CuahangNongduoc.pdb

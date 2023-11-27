@@ -84,11 +84,16 @@ namespace CuahangNongduoc
                 cmbMaSanPham.SelectedIndexChanged -= new EventHandler(cmbMaSanPham_SelectedIndexChanged);
                 ctrlMSP.HienThiAutoComboBox(cmbSanPham.SelectedValue.ToString(), cmbMaSanPham);
                 cmbMaSanPham.SelectedIndexChanged += new EventHandler(cmbMaSanPham_SelectedIndexChanged);
+                rdHetHanXuatTruoc.Enabled = true;
+                rdNhapTruocXuatTruoc.Enabled = true;
+                rdXuatChiDinh.Enabled = true;
             }
         }
 
         void cmbMaSanPham_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmbMaSanPham.SelectedValue == null)
+                return;
             try { 
                 MaSanPhamController ctrl = new MaSanPhamController();
                 MaSanPham masp = ctrl.LayMaSanPham(cmbMaSanPham.SelectedValue.ToString());
@@ -98,6 +103,8 @@ namespace CuahangNongduoc
                 txtGiaBanSi.Text = masp.SanPham.GiaBanSi.ToString(formatTien);
                 txtGiaBanLe.Text = masp.SanPham.GiaBanLe.ToString(formatTien);
                 txtGiaBQGQ.Text = masp.SanPham.DonGiaNhap.ToString(formatTien);
+                numSoLuong.Maximum = masp.SoLuong;
+                dtpNgayHetHan.Value = masp.NgayHetHan;
             }
             catch (Exception ex)
             {
@@ -344,7 +351,26 @@ namespace CuahangNongduoc
             SanPham.ShowDialog();
             ctrlSanPham.HienthiAutoComboBox(cmbSanPham);
         }
-        
 
-     }
+        private void rdNhapTruocXuatTruoc_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbMaSanPham.Enabled = !rdNhapTruocXuatTruoc.Checked;
+            ctrlMaSanPham.HienThiAutoComboBox(cmbSanPham.SelectedValue.ToString(), cmbMaSanPham);
+            cmbMaSanPham.SelectedIndex = 0;
+            cmbMaSanPham_SelectedIndexChanged(sender, e);
+            //cmbMaSanPham.SelectedItem = cmbMaSanPham.Items[0];
+
+        }
+
+        private void rdHetHanXuatTruoc_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbMaSanPham.Enabled = !rdHetHanXuatTruoc.Checked;
+            ctrlMaSanPham.HienThiAutoComboBoxTheoNgayHetHan(cmbSanPham.SelectedValue.ToString(), cmbMaSanPham);
+            cmbMaSanPham.SelectedIndex = 0;
+            cmbMaSanPham_SelectedIndexChanged(sender, e);
+            //cmbMaSanPham.SelectedItem = cmbMaSanPham.Items[0];
+
+
+        }
+    }
 }

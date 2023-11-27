@@ -97,7 +97,12 @@ namespace CuahangNongduoc.Controller
             return ds;
 
         }
-
+        public void HienThiAutoComboBoxTheoNgayHetHan(String sp, ComboBox cmb)
+        {
+            cmb.DataSource = factory.DanhsachMaSanPhamTheoNgayHetHan(sp);
+            cmb.DisplayMember = "ID";
+            cmb.ValueMember = "ID";
+        }
         public void HienThiAutoComboBox(String sp, ComboBox cmb)
         {
             cmb.DataSource = factory.DanhsachMaSanPham(sp);

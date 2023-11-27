@@ -30,7 +30,6 @@
           <DataField>TenSP</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-		
         <Field Name="PhieuBan">
           <DataField>PhieuBan</DataField>
           <rd:TypeName>CuahangNongduoc.BusinessObject.PhieuBan</rd:TypeName>
@@ -39,7 +38,6 @@
           <DataField>SoLuong</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-
         <Field Name="ThanhTien">
           <DataField>ThanhTien</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
@@ -109,7 +107,6 @@
 					</Textbox>
                   </ReportItems>
                 </TableCell>
-				
                 <TableCell>
                   <ReportItems>
                     <Textbox Name="DonGia">

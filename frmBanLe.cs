@@ -61,7 +61,6 @@ namespace CuahangNongduoc
                 this.Allow(false);
             }
 
-
         }
 
         void BindingSource_CurrentChanged(object sender, EventArgs e)
@@ -82,12 +81,16 @@ namespace CuahangNongduoc
                 cmbMaSanPham.SelectedIndexChanged -= new EventHandler(cmbMaSanPham_SelectedIndexChanged);
                 ctrlMSP.HienThiAutoComboBox(cmbSanPham.SelectedValue.ToString(), cmbMaSanPham);
                 cmbMaSanPham.SelectedIndexChanged += new EventHandler(cmbMaSanPham_SelectedIndexChanged);
+                rdHetHanXuatTruoc.Enabled = true;
+                rdNhapTruocXuatTruoc.Enabled = true;
+                rdXuatChiDinh.Enabled = true;
             }
         }
 
         void cmbMaSanPham_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (cmbMaSanPham.SelectedValue == null)
+                return;
             try
             {
                 MaSanPhamController ctrl = new MaSanPhamController();
@@ -100,6 +103,8 @@ namespace CuahangNongduoc
                 txtGiaBanSi.Text = masp.SanPham.GiaBanSi.ToString(format);
                 txtGiaBanLe.Text = masp.SanPham.GiaBanLe.ToString(format);
                 txtGiaBQGQ.Text = masp.SanPham.DonGiaNhap.ToString(format);
+                numSoLuong.Maximum = masp.SoLuong;
+                dtpNgayHetHan.Value = masp.NgayHetHan;
             }
             catch (Exception ex)
             {
@@ -351,6 +356,30 @@ namespace CuahangNongduoc
             ctrlSanPham.HienthiAutoComboBox(cmbSanPham);
         }
 
+        private void rdNhapTruocXuatTruoc_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbMaSanPham.Enabled = !rdNhapTruocXuatTruoc.Checked;
+            ctrlMaSanPham.HienThiAutoComboBox(cmbSanPham.SelectedValue.ToString(), cmbMaSanPham);
+            cmbMaSanPham.SelectedIndex = 0;
+            cmbMaSanPham_SelectedIndexChanged(sender, e);
+            //cmbMaSanPham.SelectedItem = cmbMaSanPham.Items[0];
 
-     }
+        }
+
+        private void rdHetHanXuatTruoc_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbMaSanPham.Enabled = !rdHetHanXuatTruoc.Checked;
+            ctrlMaSanPham.HienThiAutoComboBoxTheoNgayHetHan(cmbSanPham.SelectedValue.ToString(),cmbMaSanPham);
+            cmbMaSanPham.SelectedIndex = 0;
+            cmbMaSanPham_SelectedIndexChanged(sender, e);
+            //cmbMaSanPham.SelectedItem = cmbMaSanPham.Items[0];
+
+
+        }
+
+        private void rdXuatChiDinh_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+    }
 }
