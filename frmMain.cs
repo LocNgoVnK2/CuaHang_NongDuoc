@@ -11,9 +11,14 @@ namespace CuahangNongduoc
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        private string userName;
+        private frmDangNhap fDangNhap;
+        public frmMain(string userName, frmDangNhap fDangNhap)
         {
             InitializeComponent();
+            this.userName = userName;
+            tenToolStripMenuItem.Text = "Tên nhân viên đang đăng nhập : " + userName;
+            this.fDangNhap = fDangNhap; 
         }
         frmDonViTinh DonViTinh = null;
 
@@ -267,6 +272,21 @@ namespace CuahangNongduoc
         private void mnuTrogiupHuongdan_Click(object sender, EventArgs e)
         {
            // Help.ShowHelp(this, "CPP.CHM");
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+            fDangNhap.Show();
+            fDangNhap.txtMatKhau.Clear();
+            fDangNhap.txtMatKhau.Clear();
+
         }
     }
 }
