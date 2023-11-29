@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,12 +29,16 @@ namespace CuahangNongduoc
         
         private void btnXemNgay_Click(object sender, EventArgs e)
         {
+            if(dtTuNgay.Value >= dtDenNgay.Value)
+            {
+                MessageBox.Show("'Từ ngày' phải nhỏ hơn 'Đến ngày'");
+                return;
+            }
             IList<Microsoft.Reporting.WinForms.ReportParameter> param = new List<Microsoft.Reporting.WinForms.ReportParameter>();
-            param.Add(new Microsoft.Reporting.WinForms.ReportParameter("ngay", "Ng�y " + dtNgay.Value.Date.ToString("dd/MM/yyyy")));
+            param.Add(new Microsoft.Reporting.WinForms.ReportParameter("ngay", "Ngày " + dtTuNgay.Value.Date.ToString("dd/MM/yyyy")));
 
             this.reportViewer.LocalReport.SetParameters(param);
-
-            this.ChiTietPhieuBanBindingSource.DataSource = ctrl.ChiTietPhieuBanTheoNgayBan(dtNgay.Value.Date);
+            this.ChiTietPhieuBanBindingSource.DataSource = ctrl.ChiTietPhieuBanTheoNgayBan(dtTuNgay.Value.Date, dtDenNgay.Value.Date);
             this.reportViewer.RefreshReport();
         }
 
@@ -42,7 +46,7 @@ namespace CuahangNongduoc
         {
             IList<Microsoft.Reporting.WinForms.ReportParameter> param = new List<Microsoft.Reporting.WinForms.ReportParameter>();
             param.Add(new Microsoft.Reporting.WinForms.ReportParameter("ngay",
-                "Th�ng " + Convert.ToString(cmbThang.SelectedIndex + 1) + "/" + numNam.Value.ToString()));
+                "Tháng " + Convert.ToString(cmbThang.SelectedIndex + 1) + "/" + numNam.Value.ToString()));
 
             this.reportViewer.LocalReport.SetParameters(param);
 
