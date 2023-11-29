@@ -51,6 +51,17 @@ namespace CuahangNongduoc.BusinessObject
             set { m_ConNo = value; }
         }
 
+        private string m_NhanVien;
+
+        public string NhanVien
+        {
+            get { return m_NhanVien; }
+            set { m_NhanVien = value; }
+        }
+
+
+
+
         private IList<ChiTietPhieuBan> m_ChiTiet;
 
         public IList<ChiTietPhieuBan> ChiTiet
