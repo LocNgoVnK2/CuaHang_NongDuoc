@@ -106,6 +106,7 @@ namespace CuahangNongduoc.Controller
                 ph.ConNo = Convert.ToInt64(tbl.Rows[0]["CON_NO"]);
                 KhachHangController ctrlKH = new KhachHangController();
                 ph.KhachHang = ctrlKH.LayKhachHang(Convert.ToString(tbl.Rows[0]["ID_KHACH_HANG"]));
+                ph.NhanVien = Convert.ToString(tbl.Rows[0]["NHAN_VIEN"]);
                 ChiTietPhieuBanController ctrl = new ChiTietPhieuBanController();
                 ph.ChiTiet = ctrl.ChiTietPhieuBanTheoID(ph.Id);
             }

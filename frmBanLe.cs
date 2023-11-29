@@ -19,16 +19,18 @@ namespace CuahangNongduoc
         ChiTietPhieuBanController ctrlChiTiet = new ChiTietPhieuBanController();
         IList<MaSanPham> deleted = new List<MaSanPham>();
         Controll status = Controll.Normal;
+        String tenNhanVien;
 
-        public frmBanLe()
+        public frmBanLe(string tenNhanVien )
         {
             InitializeComponent();
             status = Controll.AddNew;
+            this.tenNhanVien = tenNhanVien;
         }
 
      
-        public frmBanLe(PhieuBanController ctrlPB)
-            : this()
+        public frmBanLe(string tenNhanVien, PhieuBanController ctrlPB)
+            : this(tenNhanVien)
         {
             this.ctrlPhieuBan = ctrlPB;
             status = Controll.Normal;
@@ -133,11 +135,13 @@ namespace CuahangNongduoc
             {
                 numTongTien.Value += numThanhTien.Value;
                 DataRow row = ctrlChiTiet.NewRow();
+               
                 row["ID_MA_SAN_PHAM"] = cmbMaSanPham.SelectedValue;
                 row["ID_PHIEU_BAN"] = txtMaPhieu.Text;
                 row["DON_GIA"] = numDonGia.Value;
                 row["SO_LUONG"] = numSoLuong.Value;
                 row["THANH_TIEN"] = numThanhTien.Value;
+              
                 ctrlChiTiet.Add(row);
 
             }
@@ -191,12 +195,14 @@ namespace CuahangNongduoc
         {
 
             DataRow row = ctrlPhieuBan.NewRow();
+            row["NHAN_VIEN"] = tenNhanVien;
             row["ID"] = txtMaPhieu.Text;
             row["ID_KHACH_HANG"] = cmbKhachHang.SelectedValue;
             row["NGAY_BAN"] = dtNgayLapPhieu.Value.Date;
             row["TONG_TIEN"] = numTongTien.Value;
             row["DA_TRA"] = numDaTra.Value;
             row["CON_NO"] = numConNo.Value;
+
             ctrlPhieuBan.Add(row);
 
             PhieuBanController ctrl = new PhieuBanController();
