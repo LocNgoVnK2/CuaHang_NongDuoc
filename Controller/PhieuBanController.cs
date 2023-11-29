@@ -89,6 +89,28 @@ namespace CuahangNongduoc.Controller
 
 
         }
+        public IList<PhieuBan> LayPhieuBanTheoNgayBan(DateTime dtTuNgay, DateTime denNgay)
+        {
+            IList<PhieuBan> ds = new List<PhieuBan>();
+
+            DataTable tbl = factory.LayPhieuBanTheoNgayBan(dtTuNgay, denNgay);
+            foreach (DataRow row in tbl.Rows)
+            {
+                PhieuBan pb = new PhieuBan();
+                KhachHangController khCtrl = new KhachHangController();
+                pb.Id = Convert.ToString(row["ID"]);
+                pb.NgayBan = Convert.ToDateTime(row["NGAY_BAN"]);
+                pb.ChiPhiVanChuyen = Convert.ToInt64(row["CHI_PHI_VAN_CHUYEN"]);
+                pb.DichVuPhu = Convert.ToInt64(row["DICH_VU_PHU"]);
+                pb.GiamGia = Convert.ToInt64(row["GIAM_GIA"]);
+                pb.TongTien = Convert.ToInt64(row["TONG_TIEN"]);
+                pb.DaTra = Convert.ToInt64(row["DA_TRA"]);
+                pb.ConNo = Convert.ToInt64(row["CON_NO"]);
+                pb.KhachHang = khCtrl.LayKhachHang(Convert.ToString(row["ID_KHACH_HANG"]));
+                ds.Add(pb);
+            }
+            return ds;
+        }
 
         public PhieuBan LayPhieuBan(String id)
         {

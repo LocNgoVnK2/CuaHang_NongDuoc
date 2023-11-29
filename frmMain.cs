@@ -268,5 +268,18 @@ namespace CuahangNongduoc
         {
            // Help.ShowHelp(this, "CPP.CHM");
         }
+        frmThongKe ThongKe = null;
+
+        private void mnuThongKe_Click(object sender, EventArgs e)
+        {
+            if (ThongKe == null || ThongKe.IsDisposed)
+            {
+                ThongKe = new frmThongKe();
+                ThongKe.MdiParent = this;
+                ThongKe.Show();
+            }
+            else
+                ThongKe.Activate();
+        }
     }
 }

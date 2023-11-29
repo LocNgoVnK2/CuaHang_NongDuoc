@@ -416,12 +416,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.nmrChietKhau);
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.nmrVanChuyen);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.nmrDichVu);
-            this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.rdXuatChiDinh);
             this.groupBox2.Controls.Add(this.rdHetHanXuatTruoc);
             this.groupBox2.Controls.Add(this.rdNhapTruocXuatTruoc);
@@ -434,6 +428,8 @@
             this.groupBox2.Controls.Add(this.numSoLuong);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.btnAdd);
+            this.groupBox2.Controls.Add(this.btnRemove);
             this.groupBox2.Controls.Add(this.cmbMaSanPham);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.cmbSanPham);
@@ -450,7 +446,7 @@
             // 
             // nmrChietKhau
             // 
-            this.nmrChietKhau.Location = new System.Drawing.Point(138, 294);
+            this.nmrChietKhau.Location = new System.Drawing.Point(150, 279);
             this.nmrChietKhau.Margin = new System.Windows.Forms.Padding(4);
             this.nmrChietKhau.Name = "nmrChietKhau";
             this.nmrChietKhau.Size = new System.Drawing.Size(162, 22);
@@ -462,7 +458,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(12, 294);
+            this.label20.Location = new System.Drawing.Point(24, 279);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(92, 16);
@@ -471,7 +467,7 @@
             // 
             // nmrVanChuyen
             // 
-            this.nmrVanChuyen.Location = new System.Drawing.Point(138, 264);
+            this.nmrVanChuyen.Location = new System.Drawing.Point(150, 249);
             this.nmrVanChuyen.Margin = new System.Windows.Forms.Padding(4);
             this.nmrVanChuyen.Maximum = new decimal(new int[] {
             -727379968,
@@ -493,7 +489,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 264);
+            this.label19.Location = new System.Drawing.Point(24, 249);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(118, 16);
@@ -502,7 +498,7 @@
             // 
             // nmrDichVu
             // 
-            this.nmrDichVu.Location = new System.Drawing.Point(127, 233);
+            this.nmrDichVu.Location = new System.Drawing.Point(139, 218);
             this.nmrDichVu.Margin = new System.Windows.Forms.Padding(4);
             this.nmrDichVu.Maximum = new decimal(new int[] {
             -727379968,
@@ -524,7 +520,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(12, 233);
+            this.label18.Location = new System.Drawing.Point(24, 218);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(107, 16);
@@ -717,7 +713,7 @@
             // numThanhTien
             // 
             this.numThanhTien.Enabled = false;
-            this.numThanhTien.Location = new System.Drawing.Point(97, 326);
+            this.numThanhTien.Location = new System.Drawing.Point(97, 234);
             this.numThanhTien.Margin = new System.Windows.Forms.Padding(4);
             this.numThanhTien.Maximum = new decimal(new int[] {
             -727379968,
@@ -738,7 +734,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 326);
+            this.label7.Location = new System.Drawing.Point(12, 234);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 16);
@@ -848,14 +844,18 @@
             // 
             // grpPhieuBanLe
             // 
+            this.grpPhieuBanLe.Controls.Add(this.nmrChietKhau);
             this.grpPhieuBanLe.Controls.Add(this.btnThemDaiLy);
+            this.grpPhieuBanLe.Controls.Add(this.label20);
             this.grpPhieuBanLe.Controls.Add(this.label2);
+            this.grpPhieuBanLe.Controls.Add(this.nmrVanChuyen);
             this.grpPhieuBanLe.Controls.Add(this.txtMaPhieu);
+            this.grpPhieuBanLe.Controls.Add(this.label19);
             this.grpPhieuBanLe.Controls.Add(this.label1);
+            this.grpPhieuBanLe.Controls.Add(this.nmrDichVu);
             this.grpPhieuBanLe.Controls.Add(this.dtNgayLapPhieu);
+            this.grpPhieuBanLe.Controls.Add(this.label18);
             this.grpPhieuBanLe.Controls.Add(this.cmbKhachHang);
-            this.grpPhieuBanLe.Controls.Add(this.btnAdd);
-            this.grpPhieuBanLe.Controls.Add(this.btnRemove);
             this.grpPhieuBanLe.Controls.Add(this.numConNo);
             this.grpPhieuBanLe.Controls.Add(this.label10);
             this.grpPhieuBanLe.Controls.Add(this.label5);
@@ -934,7 +934,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = global::CuahangNongduoc.Properties.Resources.down;
-            this.btnAdd.Location = new System.Drawing.Point(201, 212);
+            this.btnAdd.Location = new System.Drawing.Point(165, 265);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(63, 37);
@@ -945,7 +945,7 @@
             // btnRemove
             // 
             this.btnRemove.Image = global::CuahangNongduoc.Properties.Resources.up;
-            this.btnRemove.Location = new System.Drawing.Point(270, 211);
+            this.btnRemove.Location = new System.Drawing.Point(234, 264);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(64, 38);

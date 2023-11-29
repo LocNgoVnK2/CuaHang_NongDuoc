@@ -38,7 +38,15 @@ namespace CuahangNongduoc.DataLayer
             m_Ds.Load(cmd);
             return m_Ds;
         }
-
+        public DataTable LayPhieuBanTheoNgayBan(DateTime dtTuNgay, DateTime dtDenNgay)
+        {
+            OleDbCommand cmd = new OleDbCommand("SELECT * FROM PHIEU_BAN  " +
+                    " WHERE NGAY_BAN BETWEEN @tuNgay AND @denNgay");
+            cmd.Parameters.Add("tuNgay", OleDbType.VarChar, 50).Value = dtTuNgay;
+            cmd.Parameters.Add("denNgay", OleDbType.VarChar, 50).Value = dtDenNgay;
+            m_Ds.Load(cmd);
+            return m_Ds;
+        }
 
         public DataTable LayChiTietPhieuBan(String idPhieuBan)
         {

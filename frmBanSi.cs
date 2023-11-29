@@ -18,7 +18,7 @@ namespace CuahangNongduoc
         PhieuBanController ctrlPhieuBan = new PhieuBanController();
         ChiTietPhieuBanController ctrlChiTiet = new ChiTietPhieuBanController();
         IList<MaSanPham> deleted = new List<MaSanPham>();
-
+        private decimal baseTongTien = 0;
 
         Controll status = Controll.Normal;
 
@@ -129,7 +129,9 @@ namespace CuahangNongduoc
             }
             else
             {
-                numTongTien.Value += numThanhTien.Value;
+                //numTongTien.Value += numThanhTien.Value;
+                baseTongTien += numThanhTien.Value;
+                TinhTongTien();
                 DataRow row = ctrlChiTiet.NewRow();
                 row["ID_MA_SAN_PHAM"] = cmbMaSanPham.SelectedValue;
                 row["ID_PHIEU_BAN"] = txtMaPhieu.Text;
@@ -144,7 +146,7 @@ namespace CuahangNongduoc
 
         private void numDonGia_ValueChanged(object sender, EventArgs e)
         {
-            TinhTongTien();
+            numThanhTien.Value = numSoLuong.Value * numDonGia.Value;
         }
 
         private void numTongTien_ValueChanged(object sender, EventArgs e)
@@ -193,6 +195,11 @@ namespace CuahangNongduoc
             row["TONG_TIEN"] = numTongTien.Value;
             row["DA_TRA"] = numDaTra.Value;
             row["CON_NO"] = numConNo.Value;
+            row["CHI_PHI_VAN_CHUYEN"] = nmrVanChuyen.Value;
+            row["DICH_VU_PHU"] = nmrDichVu.Value;
+            decimal thanhTien = baseTongTien + nmrVanChuyen.Value + nmrDichVu.Value;
+            decimal soTienChietKhau = thanhTien * nmrChietKhau.Value / 100;
+            row["GIAM_GIA"] = soTienChietKhau;
             ctrlPhieuBan.Add(row);
 
             PhieuBanController ctrl = new PhieuBanController();
@@ -233,7 +240,9 @@ namespace CuahangNongduoc
             {
                 BindingSource bs = ((BindingSource)dgvDanhsachSP.DataSource);
                 DataRowView row = (DataRowView)bs.Current;
-                numTongTien.Value -= Convert.ToInt64(row["THANH_TIEN"]);
+               // numTongTien.Value -= Convert.ToInt64(row["THANH_TIEN"]);
+               baseTongTien -= Convert.ToInt64(row["THANH_TIEN"]);
+                TinhTongTien();
                 deleted.Add(new MaSanPham(Convert.ToString(row["ID_MA_SAN_PHAM"]), Convert.ToInt32(row["SO_LUONG"])));
                 bs.RemoveCurrent();
                 
@@ -389,9 +398,9 @@ namespace CuahangNongduoc
         }
         private void TinhTongTien()
         {
-            decimal thanhTien = numDonGia.Value * numSoLuong.Value + nmrVanChuyen.Value + nmrDichVu.Value;
+            decimal thanhTien = baseTongTien + nmrVanChuyen.Value + nmrDichVu.Value;
             decimal soTienChietKhau = thanhTien * nmrChietKhau.Value / 100;
-            numThanhTien.Value = thanhTien - soTienChietKhau;
+            numTongTien.Value = thanhTien - soTienChietKhau;
         }
     }
 }

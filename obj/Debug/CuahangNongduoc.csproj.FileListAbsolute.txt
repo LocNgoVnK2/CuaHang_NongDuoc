@@ -163,3 +163,4 @@ D:\BTPM\obj\Debug\CuahangNongduoc.csproj.CoreCompileInputs.cache
 D:\BTPM\obj\Debug\CuahangNongduoc.csproj.CopyComplete
 D:\BTPM\obj\Debug\CuahangNongduoc.exe
 D:\BTPM\obj\Debug\CuahangNongduoc.pdb
+D:\BTPM\obj\Debug\CuahangNongduoc.frmThongKe.resources
