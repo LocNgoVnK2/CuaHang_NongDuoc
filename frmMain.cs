@@ -11,9 +11,14 @@ namespace CuahangNongduoc
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        private string userName;
+        private frmDangNhap fDangNhap;
+        public frmMain(string userName, frmDangNhap fDangNhap)
         {
             InitializeComponent();
+            this.userName = userName;
+            tenToolStripMenuItem.Text = "Tên nhân viên đang đăng nhập : " + userName;
+            this.fDangNhap = fDangNhap; 
         }
         frmDonViTinh DonViTinh = null;
 
@@ -88,7 +93,7 @@ namespace CuahangNongduoc
         {
             if (BanLe == null || BanLe.IsDisposed)
             {
-                BanLe = new frmDanhsachPhieuBanLe();
+                BanLe = new frmDanhsachPhieuBanLe(userName);
                 BanLe.MdiParent = this;
                 BanLe.Show();
             }
@@ -100,7 +105,7 @@ namespace CuahangNongduoc
         {
             if (BanSi == null || BanSi.IsDisposed)
             {
-                BanSi = new frmDanhsachPhieuBanSi();
+                BanSi = new frmDanhsachPhieuBanSi(userName);
                 BanSi.MdiParent = this;
                 BanSi.Show();
             }
@@ -268,6 +273,7 @@ namespace CuahangNongduoc
         {
            // Help.ShowHelp(this, "CPP.CHM");
         }
+<<<<<<< HEAD
         frmThongKe ThongKe = null;
 
         private void mnuThongKe_Click(object sender, EventArgs e)
@@ -280,6 +286,22 @@ namespace CuahangNongduoc
             }
             else
                 ThongKe.Activate();
+=======
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+            fDangNhap.Show();
+            fDangNhap.txtMatKhau.Clear();
+            fDangNhap.txtMatKhau.Clear();
+
+>>>>>>> e66b2095edac7d74efe5dc6c660cc4c796ca6b84
         }
     }
 }

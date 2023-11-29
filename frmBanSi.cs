@@ -18,20 +18,25 @@ namespace CuahangNongduoc
         PhieuBanController ctrlPhieuBan = new PhieuBanController();
         ChiTietPhieuBanController ctrlChiTiet = new ChiTietPhieuBanController();
         IList<MaSanPham> deleted = new List<MaSanPham>();
+<<<<<<< HEAD
         private decimal baseTongTien = 0;
+=======
+        string TenNhanVien;
+>>>>>>> e66b2095edac7d74efe5dc6c660cc4c796ca6b84
 
         Controll status = Controll.Normal;
 
-        public frmBanSi()
+        public frmBanSi(string TenNhanVien)
         {
             InitializeComponent();
+            this.TenNhanVien = TenNhanVien;
             
             status = Controll.AddNew;
         }
 
 
-        public frmBanSi(PhieuBanController ctrlPB)
-            : this()
+        public frmBanSi(string TenNhanVien,PhieuBanController ctrlPB)
+            : this(TenNhanVien)
         {
             this.ctrlPhieuBan = ctrlPB;
             status = Controll.Normal;
@@ -189,6 +194,7 @@ namespace CuahangNongduoc
         void ThemMoi()
         {
             DataRow row = ctrlPhieuBan.NewRow();
+            row["NHAN_VIEN"] = TenNhanVien;
             row["ID"] = txtMaPhieu.Text;
             row["ID_KHACH_HANG"] = cmbKhachHang.SelectedValue;
             row["NGAY_BAN"] = dtNgayLapPhieu.Value.Date;
