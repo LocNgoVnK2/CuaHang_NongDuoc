@@ -20,6 +20,10 @@ namespace CuahangNongduoc.BusinessObject
             get { return m_MaSP; }
             set { m_MaSP = value; }
         }
+        public string IdSanPham
+        {
+            get { return m_MaSP.Id.ToString(); }
+        }
         public string NgayHetHan
         {
             get { return m_MaSP.NgayHetHan.ToString("dd/MM/yyyy"); }

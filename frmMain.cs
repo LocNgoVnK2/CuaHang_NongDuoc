@@ -13,9 +13,11 @@ namespace CuahangNongduoc
     {
         private string userName;
         private frmDangNhap fDangNhap;
-        public frmMain(string userName, frmDangNhap fDangNhap)
+        private string idNhanVien;
+        public frmMain(string idNhanVien,string userName, frmDangNhap fDangNhap)
         {
             InitializeComponent();
+            this.idNhanVien = idNhanVien;
             this.userName = userName;
             tenToolStripMenuItem.Text = "Tên nhân viên đang đăng nhập : " + userName;
             this.fDangNhap = fDangNhap; 
@@ -274,6 +276,18 @@ namespace CuahangNongduoc
            // Help.ShowHelp(this, "CPP.CHM");
         }
 
+        frmThongKe ThongKe = null;
+
+        private void mnuThongKe_Click(object sender, EventArgs e)
+        {
+            if (ThongKe == null || ThongKe.IsDisposed)
+            {
+                ThongKe = new frmThongKe(idNhanVien);
+                ThongKe.MdiParent = this;
+                ThongKe.Show();
+            }
+            else
+                ThongKe.Activate(); }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
 

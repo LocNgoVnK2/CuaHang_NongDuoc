@@ -163,4 +163,10 @@ D:\BTPM\obj\Debug\CuahangNongduoc.csproj.CoreCompileInputs.cache
 D:\BTPM\obj\Debug\CuahangNongduoc.csproj.CopyComplete
 D:\BTPM\obj\Debug\CuahangNongduoc.exe
 D:\BTPM\obj\Debug\CuahangNongduoc.pdb
+<<<<<<< HEAD
+D:\BTPM\obj\Debug\CuahangNongduoc.frmThongKe.resources
+=======
 D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\obj\Debug\CuahangNongduoc.frmDangNhap.resources
+>>>>>>> e66b2095edac7d74efe5dc6c660cc4c796ca6b84
+D:\BTPM\obj\Debug\CuahangNongduoc.frmDangNhap.resources
+D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\obj\Debug\CuahangNongduoc.frmThongKe.resources

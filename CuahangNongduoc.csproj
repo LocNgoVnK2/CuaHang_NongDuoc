@@ -248,6 +248,12 @@
     <Compile Include="frmSanphamHethan.Designer.cs">
       <DependentUpon>frmSanphamHethan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKe.Designer.cs">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSoLuongBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -396,6 +402,10 @@
       <SubType>Designer</SubType>
       <DependentUpon>frmSanphamHethan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKe.resx">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSoLuongBan.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmSoLuongBan.cs</DependentUpon>
@@ -445,6 +455,7 @@
     <EmbeddedResource Include="Report\rptPhieuChi.rdlc" />
     <EmbeddedResource Include="Report\rptPhieuNhap.rdlc" />
     <EmbeddedResource Include="Report\rptSanPhamHetHan.rdlc" />
+    <EmbeddedResource Include="Report\rptThongKe.rdlc" />
     <EmbeddedResource Include="Report\rptSoLuongBan.rdlc" />
     <EmbeddedResource Include="Report\rptSoLuongTon.rdlc" />
     <EmbeddedResource Include="Report\rptThanhToan.rdlc" />

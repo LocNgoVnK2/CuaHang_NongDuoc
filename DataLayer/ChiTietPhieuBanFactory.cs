@@ -27,7 +27,12 @@ namespace CuahangNongduoc.DataLayer
             return QueryChiTietPhieuBan(query, idPhieuBan);
          
         }
-
+        public DataTable LayChiTietPhieuBanTheoNgayBan(DateTime dtTuNgay, DateTime dtDenNgay)
+        {
+            string query = "SELECT CT.* FROM CHI_TIET_PHIEU_BAN CT INNER JOIN PHIEU_BAN PB ON CT.ID_PHIEU_BAN = PB.ID " +
+                    " WHERE PB.NGAY_BAN BETWEEN @tuNgay AND @denNgay";
+            return QueryChiTietPhieuBan(query, dtTuNgay, dtDenNgay);
+        }
         public DataTable LayChiTietPhieuBanTheoNgayBan(DateTime dtNgayBan)
         {
             string query = "SELECT CT.* FROM CHI_TIET_PHIEU_BAN CT INNER JOIN PHIEU_BAN PB ON CT.ID_PHIEU_BAN = PB.ID " +
