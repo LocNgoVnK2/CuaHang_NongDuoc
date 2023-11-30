@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="DummyDataSource">
@@ -7,46 +7,50 @@
         <DataProvider>SQL</DataProvider>
         <ConnectString />
       </ConnectionProperties>
-      <rd:DataSourceID>4a550185-f564-4079-934c-140f48ae0474</rd:DataSourceID>
+      <rd:DataSourceID>6d90fe6a-1fae-41c5-9575-ed7e56f73ad7</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="CuahangNongduoc_BusinessObject_ChiTietPhieuBan">
+    <DataSet Name="CuahangNongduoc_BusinessObject_DuNoKhachHang">
       <Query>
         <DataSourceName>DummyDataSource</DataSourceName>
         <CommandText />
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <Fields>
-        <Field Name="DonGia">
-          <DataField>DonGia</DataField>
+        <Field Name="CuoiKy">
+          <DataField>CuoiKy</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="TenSP">
-          <DataField>TenSP</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="DaTra">
+          <DataField>DaTra</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="PhieuBan">
-          <DataField>PhieuBan</DataField>
-          <rd:TypeName>CuahangNongduoc.BusinessObject.PhieuBan</rd:TypeName>
+        <Field Name="DauKy">
+          <DataField>DauKy</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
-        <Field Name="SoLuong">
-          <DataField>SoLuong</DataField>
+        <Field Name="KhachHang">
+          <DataField>KhachHang</DataField>
+          <rd:TypeName>CuahangNongduoc.BusinessObject.KhachHang</rd:TypeName>
+        </Field>
+        <Field Name="Nam">
+          <DataField>Nam</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="NgayHetHan">
-          <DataField>NgayHetHan</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="ThanhTien">
-          <DataField>ThanhTien</DataField>
+        <Field Name="PhatSinh">
+          <DataField>PhatSinh</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Thang">
+          <DataField>Thang</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>CuahangNongduoc.BusinessObject</rd:DataSetName>
-        <rd:TableName>ChiTietPhieuBan</rd:TableName>
-        <rd:ObjectDataSourceType>CuahangNongduoc.BusinessObject.ChiTietPhieuBan, CuahangNongduoc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>DuNoKhachHang</rd:TableName>
+        <rd:ObjectDataSourceType>CuahangNongduoc.BusinessObject.DuNoKhachHang, CuahangNongduoc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -59,19 +63,19 @@
                   <Width>1cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4cm</Width>
+                  <Width>4.25cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.75cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.25cm</Width>
+                  <Width>2.75cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.75cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.75cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -80,7 +84,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="textbox7">
+                        <Textbox Name="textbox1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -100,8 +104,8 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>textbox7</rd:DefaultName>
-                          <ZIndex>9</ZIndex>
+                          <rd:DefaultName>textbox1</rd:DefaultName>
+                          <ZIndex>16</ZIndex>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -123,7 +127,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Sản phẩm</Value>
+                                  <Value>Khách hàng</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -137,7 +141,43 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox2</rd:DefaultName>
-                          <ZIndex>8</ZIndex>
+                          <ZIndex>15</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Đầu kỳ</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <FontFamily />
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox3</rd:DefaultName>
+                          <ZIndex>14</ZIndex>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -159,7 +199,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Đơn giá</Value>
+                                  <Value>Phát sinh</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -173,7 +213,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox10</rd:DefaultName>
-                          <ZIndex>7</ZIndex>
+                          <ZIndex>13</ZIndex>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -195,7 +235,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Số lượng</Value>
+                                  <Value>Đã trả</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -209,7 +249,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox13</rd:DefaultName>
-                          <ZIndex>6</ZIndex>
+                          <ZIndex>12</ZIndex>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -231,7 +271,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Thành tiền</Value>
+                                  <Value>Cuối kỳ</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -245,43 +285,7 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox16</rd:DefaultName>
-                          <ZIndex>5</ZIndex>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="textbox17">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Ngày hết hạn </Value>
-                                  <Style>
-                                    <FontFamily>Times New Roman</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <FontFamily />
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>textbox17</rd:DefaultName>
-                          <ZIndex>5</ZIndex>
+                          <ZIndex>11</ZIndex>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -314,13 +318,42 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <FontFamily />
-                                <TextAlign>Center</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox4</rd:DefaultName>
+                          <ZIndex>5</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="KhachHang">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!KhachHang.Value.HoTen</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>KhachHang</rd:DefaultName>
                           <ZIndex>4</ZIndex>
                           <Style>
                             <Border>
@@ -336,23 +369,27 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TenSP">
+                        <Textbox Name="DauKy">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!TenSP.Value</Value>
+                                  <Value>=Fields!DauKy.Value</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
+                                    <Format>#,###0</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <FontFamily />
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>TenSP</rd:DefaultName>
+                          <rd:DefaultName>DauKy</rd:DefaultName>
                           <ZIndex>3</ZIndex>
                           <Style>
                             <Border>
@@ -368,14 +405,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="DonGia">
+                        <Textbox Name="PhatSinh">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!DonGia.Value</Value>
+                                  <Value>=Fields!PhatSinh.Value</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
                                     <Format>#,###0</Format>
@@ -388,7 +425,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>DonGia</rd:DefaultName>
+                          <rd:DefaultName>PhatSinh</rd:DefaultName>
                           <ZIndex>2</ZIndex>
                           <Style>
                             <Border>
@@ -404,14 +441,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="SoLuong">
+                        <Textbox Name="DaTra">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!SoLuong.Value</Value>
+                                  <Value>=Fields!DaTra.Value</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
                                     <Format>#,###0</Format>
@@ -424,7 +461,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>SoLuong</rd:DefaultName>
+                          <rd:DefaultName>DaTra</rd:DefaultName>
                           <ZIndex>1</ZIndex>
                           <Style>
                             <Border>
@@ -440,14 +477,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="ThanhTien">
+                        <Textbox Name="CuoiKy">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!ThanhTien.Value</Value>
+                                  <Value>=Fields!CuoiKy.Value</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
                                     <Format>#,###0</Format>
@@ -460,7 +497,84 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>ThanhTien</rd:DefaultName>
+                          <rd:DefaultName>CuoiKy</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.63492cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="textbox7">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Tổng:</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox7</rd:DefaultName>
+                          <ZIndex>10</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>2</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="DauKy_1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!DauKy.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,###0</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <FontFamily />
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>DauKy_1</rd:DefaultName>
+                          <ZIndex>9</ZIndex>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -475,16 +589,17 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="NgayHetHan">
+                        <Textbox Name="PhatSinh_1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!NgayHetHan.Value</Value>
+                                  <Value>=Sum(Fields!PhatSinh.Value)</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
                                     <Format>#,###0</Format>
                                   </Style>
                                 </TextRun>
@@ -495,7 +610,82 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>NgayHetHan</rd:DefaultName>
+                          <rd:DefaultName>PhatSinh_1</rd:DefaultName>
+                          <ZIndex>8</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="DaTra_1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!DaTra.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,###0</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <FontFamily />
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>DaTra_1</rd:DefaultName>
+                          <ZIndex>7</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="CuoiKy_1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!CuoiKy.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,###0</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <FontFamily />
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>CuoiKy_1</rd:DefaultName>
+                          <ZIndex>6</ZIndex>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -539,19 +729,22 @@
                   <DataElementOutput>Output</DataElementOutput>
                   <KeepTogether>true</KeepTogether>
                 </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                  <KeepTogether>true</KeepTogether>
+                </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <Height>1.26984cm</Height>
-            <Width>14.75cm</Width>
-            <Style>
-              <FontFamily>Times New Roman</FontFamily>
-            </Style>
+            <DataSetName>CuahangNongduoc_BusinessObject_DuNoKhachHang</DataSetName>
+            <Height>1.90476cm</Height>
+            <Width>16.25cm</Width>
+            <Style />
           </Tablix>
         </ReportItems>
-        <Height>1.26984cm</Height>
+        <Height>1.90476cm</Height>
         <Style />
       </Body>
-      <Width>14.75cm</Width>
+      <Width>16.25cm</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
@@ -565,5 +758,5 @@
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>e708ef94-5f3d-48d0-abce-c38666b0c833</rd:ReportID>
+  <rd:ReportID>da9413f5-c7a4-4990-8da4-c56842f64c02</rd:ReportID>
 </Report>

@@ -84,9 +84,10 @@ namespace CuahangNongduoc.DataLayer
             TaiKhoan taiKhoan = new TaiKhoan();
             taiKhoan.ID = row["ID"].ToString();
             taiKhoan.TenTaiKhoan = row["TenTaiKhoan"].ToString();
+            taiKhoan.TenNhanVien = row["TenNhanVien"].ToString();
             taiKhoan.MatKhau = row["MatKhau"].ToString();
             taiKhoan.SoDienThoai = row["SoDienThoai"].ToString();
-
+            taiKhoan.Admin = bool.Parse(row["Admin"].ToString());
             return taiKhoan;
         }
     }

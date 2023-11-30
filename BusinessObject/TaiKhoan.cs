@@ -40,6 +40,11 @@ namespace CuahangNongduoc.BusinessObject
             get { return m_SoDienThoai; }
             set { m_SoDienThoai = value; }
         }
-        
+        private bool m_Admin;
+        public bool Admin
+        {
+            get { return m_Admin; }
+            set { m_Admin = value; }
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace CuahangNongduoc.Controller
     {
         private TaiKhoanFactory taiKhoanFactory = new TaiKhoanFactory();
 
-        public string DangNhap(string tenTaiKhoan, string matKhau)
+        public TaiKhoan DangNhap(string tenTaiKhoan, string matKhau)
         {
         
             DataTable dataTable = taiKhoanFactory.LayTaiKhoanTheoTen(tenTaiKhoan);
@@ -21,8 +21,10 @@ namespace CuahangNongduoc.Controller
 
                 if (matKhau == storedPassword)
                 {
-                    return row["TenNhanVien"].ToString();
-                   
+                    TaiKhoan tk = new TaiKhoan();
+                    tk.TenNhanVien = row["TenNhanVien"].ToString();
+                    tk.ID = row["ID"].ToString();
+                    return tk;
                 }
             }
             return null;
