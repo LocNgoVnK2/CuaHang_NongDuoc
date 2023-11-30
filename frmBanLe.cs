@@ -19,14 +19,10 @@ namespace CuahangNongduoc
         ChiTietPhieuBanController ctrlChiTiet = new ChiTietPhieuBanController();
         IList<MaSanPham> deleted = new List<MaSanPham>();
         Controll status = Controll.Normal;
-<<<<<<< HEAD
         decimal baseTongTien = 0;
-        public frmBanLe()
-=======
         String tenNhanVien;
 
         public frmBanLe(string tenNhanVien )
->>>>>>> e66b2095edac7d74efe5dc6c660cc4c796ca6b84
         {
             InitializeComponent();
             status = Controll.AddNew;
@@ -148,11 +144,6 @@ namespace CuahangNongduoc
                 row["DON_GIA"] = numDonGia.Value;
                 row["SO_LUONG"] = numSoLuong.Value;
                 row["THANH_TIEN"] = numThanhTien.Value;
-<<<<<<< HEAD
-
-=======
-              
->>>>>>> e66b2095edac7d74efe5dc6c660cc4c796ca6b84
                 ctrlChiTiet.Add(row);
 
             }
@@ -213,15 +204,11 @@ namespace CuahangNongduoc
             row["TONG_TIEN"] = numTongTien.Value;
             row["DA_TRA"] = numDaTra.Value;
             row["CON_NO"] = numConNo.Value;
-<<<<<<< HEAD
             row["CHI_PHI_VAN_CHUYEN"] = nmrVanChuyen.Value;
             row["DICH_VU_PHU"] = nmrDichVu.Value;
             decimal thanhTien = baseTongTien + nmrVanChuyen.Value + nmrDichVu.Value;
             decimal soTienChietKhau = thanhTien * nmrChietKhau.Value / 100;
             row["GIAM_GIA"] = soTienChietKhau;
-=======
-
->>>>>>> e66b2095edac7d74efe5dc6c660cc4c796ca6b84
             ctrlPhieuBan.Add(row);
 
             PhieuBanController ctrl = new PhieuBanController();

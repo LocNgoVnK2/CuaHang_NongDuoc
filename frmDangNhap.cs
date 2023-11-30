@@ -23,15 +23,15 @@ namespace CuahangNongduoc
             string tenTaiKhoan = txtTaiKhoan.Text;
             string matKhau = txtMatKhau.Text;
 
-            string userName = taiKhoanController.DangNhap(tenTaiKhoan, matKhau);
-            bool loginSuccessful = userName != null;
+            TaiKhoan tk = taiKhoanController.DangNhap(tenTaiKhoan, matKhau);
+            bool loginSuccessful = tk != null;
 
             if (loginSuccessful)
             {
               
                 this.Hide();
 
-                using (var frmMain = new frmMain(userName, this))
+                using (var frmMain = new frmMain(tk.ID,tk.TenNhanVien, this))
                 {
                     frmMain.ShowDialog();
                 }

@@ -168,3 +168,4 @@ D:\BTPM\obj\Debug\CuahangNongduoc.frmThongKe.resources
 =======
 D:\.netSave\Cuahang_Nongduoc\Cuahang Nongduoc\obj\Debug\CuahangNongduoc.frmDangNhap.resources
 >>>>>>> e66b2095edac7d74efe5dc6c660cc4c796ca6b84
+D:\BTPM\obj\Debug\CuahangNongduoc.frmDangNhap.resources

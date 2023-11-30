@@ -89,11 +89,11 @@ namespace CuahangNongduoc.Controller
 
 
         }
-        public IList<PhieuBan> LayPhieuBanTheoNgayBan(DateTime dtTuNgay, DateTime denNgay)
+        public IList<PhieuBan> LayPhieuBanTheoNgayBan(DateTime dtTuNgay, DateTime denNgay,TaiKhoan taikhoan)
         {
             IList<PhieuBan> ds = new List<PhieuBan>();
 
-            DataTable tbl = factory.LayPhieuBanTheoNgayBan(dtTuNgay, denNgay);
+            DataTable tbl = taikhoan.Admin ? factory.LayToanBoPhieuBanTheoNgayBan(dtTuNgay, denNgay) : factory.LayPhieuBanTheoNgayBanDuaTrenNhanVien(dtTuNgay, denNgay, taikhoan.TenNhanVien);
             foreach (DataRow row in tbl.Rows)
             {
                 PhieuBan pb = new PhieuBan();

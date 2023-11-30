@@ -18,11 +18,8 @@ namespace CuahangNongduoc
         PhieuBanController ctrlPhieuBan = new PhieuBanController();
         ChiTietPhieuBanController ctrlChiTiet = new ChiTietPhieuBanController();
         IList<MaSanPham> deleted = new List<MaSanPham>();
-<<<<<<< HEAD
         private decimal baseTongTien = 0;
-=======
         string TenNhanVien;
->>>>>>> e66b2095edac7d74efe5dc6c660cc4c796ca6b84
 
         Controll status = Controll.Normal;
 
